@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Market Report - April 2025</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #1a237e, #4a148c);
+            color: white;
+            border-radius: 8px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #4a148c;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h3 {
+            color: #6a1b9a;
+        }
+        .date {
+            font-style: italic;
+            margin-top: 10px;
+            font-size: 1.1em;
+            opacity: 0.8;
+        }
+        .summary-box {
+            background-color: #e8eaf6;
+            border-left: 5px solid #3f51b5;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .chart-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .chart-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .chart-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+        }
+        .news-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .news-date {
+            color: #7986cb;
+            font-weight: bold;
+        }
+        .key-stats {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .stat-box {
+            flex-basis: 30%;
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #4a148c;
+            margin: 10px 0;
+        }
+        .stat-label {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .fear-greed {
+            background-color: #ffebee;
+            color: #b71c1c;
+        }
+        .conclusion {
+            background-color: #e8f5e9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+            padding: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+        @media (max-width: 768px) {
+            .stat-box {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cryptocurrency Market Report</h1>
+        <div class="date">April 4, 2025</div>
+    </header>
+
+    <div class="summary-box">
+        <h3>Executive Summary</h3>
+        <p>The cryptocurrency market has shown mixed performance over the past 30 days, with Bitcoin maintaining its dominance at 62.0% of the total market capitalization. The total crypto market cap currently stands at $2.66 trillion, with a slight decrease of 0.37% in the last 24 hours. The Fear and Greed Index is at 25, indicating a sentiment of "Fear" among investors.</p>
+    </div>
+
+    <h2>Market Overview</h2>
+    
+    <div class="key-stats">
+        <div class="stat-box">
+            <div class="stat-label">Bitcoin Price</div>
+            <div class="stat-value">$83,058.22</div>
+            <div class="stat-label">+3.29% (7d)</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-label">Ethereum Price</div>
+            <div class="stat-value">$1,800.73</div>
+            <div class="stat-label">+6.10% (7d)</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-label">Total Market Cap</div>
+            <div class="stat-value">$2.66T</div>
+            <div class="stat-label">-0.37% (24h)</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-label">24h Volume</div>
+            <div class="stat-value">$88.52B</div>
+            <div class="stat-label">+31.89% (24h)</div>
+        </div>
+        <div class="stat-box fear-greed">
+            <div class="stat-label">Fear & Greed Index</div>
+            <div class="stat-value">25</div>
+            <div class="stat-label">Fear</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-label">Altcoin Season Index</div>
+            <div class="stat-value">14/100</div>
+            <div class="stat-label">Bitcoin Season</div>
+        </div>
+    </div>
+
+    <div class="chart-container">
+        <img src="bitcoin_price_30days.png" alt="Bitcoin Price Chart (30 Days)">
+        <div class="chart-caption">Bitcoin Price Movement Over the Last 30 Days</div>
+    </div>
+
+    <div class="chart-container">
+        <img src="ethereum_price_30days.png" alt="Ethereum Price Chart (30 Days)">
+        <div class="chart-caption">Ethereum Price Movement Over the Last 30 Days</div>
+    </div>
+
+    <div class="chart-container">
+        <img src="market_cap_30days.png" alt="Total Market Cap Chart (30 Days)">
+        <div class="chart-caption">Total Cryptocurrency Market Capitalization Over the Last 30 Days</div>
+    </div>
+
+    <h2>Market Sentiment</h2>
+    
+    <p>The current Fear and Greed Index reading of 25 indicates a sentiment of "Fear" in the cryptocurrency market. This suggests that investors are cautious and potentially looking for buying opportunities. Historically, extreme fear can be a buying opportunity, while extreme greed can be a selling signal.</p>
+    
+    <div class="chart-container">
+        <img src="fear_greed_30days.png" alt="Fear and Greed Index (30 Days)">
+        <div class="chart-caption">Fear and Greed Index Fluctuations Over the Last 30 Days</div>
+    </div>
+
+    <h2>Market Dominance</h2>
+    
+    <p>Bitcoin continues to dominate the cryptocurrency market with a 62.0% share of the total market capitalization. Ethereum follows with 8.2%, while other altcoins make up the remaining 29.8%.</p>
+    
+    <div class="chart-container">
+        <img src="market_dominance_pie.png" alt="Cryptocurrency Market Dominance">
+        <div class="chart-caption">Distribution of Market Capitalization Among Major Cryptocurrencies</div>
+    </div>
+
+    <h2>Top Performers</h2>
+    
+    <p>Several cryptocurrencies have shown remarkable performance over the past 30 days. MIU leads the pack with an extraordinary gain of 292.38%, followed by DGB (17.33%), FUN (12.74%), ATOM (9.14%), and AMP (8.97%).</p>
+    
+    <div class="chart-container">
+        <img src="top_gainers_30days.png" alt="Top Gainers (30 Days)">
+        <div class="chart-caption">Top Performing Cryptocurrencies Over the Last 30 Days</div>
+    </div>
+
+    <h2>Key Market News</h2>
+    
+    <div class="news-item">
+        <div class="news-date">April 3, 2025</div>
+        <h3>Bitcoin ETF Net Outflows Reach $103.4 Million</h3>
+        <p>Bitcoin ETFs experienced net outflows of $103.4 million on April 3, 2025, continuing the trend of fluctuating investor interest in these investment vehicles. Despite these outflows, the total assets under management (AUM) for Bitcoin ETFs remain substantial, indicating long-term investor confidence in the cryptocurrency.</p>
+    </div>
+    
+    <div class="news-item">
+        <div class="news-date">March 28, 2025</div>
+        <h3>Solana Surges 13.10% in Weekly Performance</h3>
+        <p>Solana (SOL) has demonstrated strong performance over the past week, gaining 13.10% and reaching a price of $116.36. This surge comes amid increased adoption of the Solana blockchain for various decentralized applications and NFT projects, highlighting the platform's growing ecosystem.</p>
+    </div>
+    
+    <div class="news-item">
+        <div class="news-date">March 25, 2025</div>
+        <h3>XRP Gains Momentum with 8.66% Weekly Increase</h3>
+        <p>XRP has shown significant momentum over the past week, with an 8.66% increase in price to $2.05. This positive movement comes as Ripple continues to make progress in its legal battles and expands its cross-border payment solutions globally.</p>
+    </div>
+    
+    <div class="news-item">
+        <div class="news-date">March 20, 2025</div>
+        <h3>MIU Token Skyrockets with 292.38% Gain</h3>
+        <p>MIU token has emerged as the top performer in the cryptocurrency market with an astonishing 292.38% gain over the past 30 days. This remarkable performance has caught the attention of investors and traders looking for high-growth opportunities in the altcoin market.</p>
+    </div>
+    
+    <div class="news-item">
+        <div class="news-date">March 15, 2025</div>
+        <h3>Fear and Greed Index Remains in "Fear" Territory</h3>
+        <p>The Crypto Fear and Greed Index has been consistently in the "Fear" range over the past month, currently standing at 25. This persistent cautious sentiment comes despite the overall stability in major cryptocurrency prices, suggesting that investors remain wary of potential market volatility.</p>
+    </div>
+
+    <div class="conclusion">
+        <h2>Market Outlook</h2>
+        <p>The cryptocurrency market shows signs of consolidation after the significant gains seen in early 2025. Bitcoin continues to maintain its dominant position, while select altcoins demonstrate strong performance. The current "Fear" sentiment, as indicated by the Fear and Greed Index, suggests potential buying opportunities for long-term investors.</p>
+        <p>Key factors to watch in the coming months include:</p>
+        <ul>
+            <li>Regulatory developments, particularly in major economies</li>
+            <li>Institutional adoption trends and ETF flows</li>
+            <li>Technological advancements in layer-1 and layer-2 solutions</li>
+            <li>Macroeconomic factors affecting risk assets</li>
+        </ul>
+        <p>While short-term volatility is expected to continue, the fundamental growth of blockchain technology and cryptocurrency adoption suggests a positive long-term outlook for the sector.</p>
+    </div>
+
+    <footer>
+        <p>This report is for informational purposes only and does not constitute investment advice. Cryptocurrency investments are subject to high market risk. Past performance is not indicative of future results.</p>
+        <p>© 2025 Crypto Market Analysis | Data sourced from CoinMarketCap</p>
+    </footer>
+</body>
+</html>

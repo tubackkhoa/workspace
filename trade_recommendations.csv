@@ -1,0 +1,10 @@
+crypto,position_type,entry_price,stop_loss,take_profit,risk_reward_ratio,safety_score,supporting_whales,avg_whale_win_rate,market_favorable,description,bias,time_frame
+SOL,Short,96.5305295469842,106.9954757695097,65.95888748483272,2.9213377127869893,95.91815179867204,1,0.95,True,SHORT SOL based on 1 whale positions with average 95.00% win rate.,Bearish,Short-term
+MATIC,Short,7.551748457077487,8.402500383853296,6.5758055220128995,1.1471533643928722,86.30519926533371,1,0.95,True,SHORT MATIC based on 1 whale positions with average 95.00% win rate.,Bearish,Medium-term
+LINK,Short,34.00466632330069,35.72805369640134,23.691600497548105,5.984183235135191,73.52416003880326,2,0.7536443398991868,True,SHORT LINK based on 2 whale positions with average 75.36% win rate.,Bearish,Short-term
+UNI,Long,41.89240532579907,39.0311074561618,57.83469901334186,5.57170012137318,72.17967031250969,1,0.9245226760534744,False,LONG UNI based on 1 whale positions with average 92.45% win rate.,Bullish,Medium-term
+ADA,Long,0.1,0.09453030061316663,0.14369139098379993,7.987896206686153,63.18156387969566,1,0.6923264286578524,False,LONG ADA based on 1 whale positions with average 69.23% win rate.,Bullish,Medium-term
+AVAX,Long,13.65170328505056,12.291357017900218,18.563150852552198,3.610439258079601,61.399773455853236,2,0.6477569041676962,False,LONG AVAX based on 2 whale positions with average 64.78% win rate.,Bullish,Short-term
+XRP,Long,10.47341815405856,8.488960695641309,13.152487512253357,1.350026097476309,58.937118755286704,2,0.6858908660234754,False,LONG XRP based on 2 whale positions with average 68.59% win rate.,Neutral,Medium-term
+BNB,Long,50.626291119709904,41.20296788580376,60.737216618389844,1.072968128939876,41.32504424890874,1,0.40993557386319257,False,LONG BNB based on 1 whale positions with average 40.99% win rate.,Neutral,Medium-term
+DOT,Long,0.1,0.0847894182266785,0.13123738333268548,2.0536613127759558,32.486961069936314,1,0.26218431770514383,False,LONG DOT based on 1 whale positions with average 26.22% win rate.,Neutral,Short-term

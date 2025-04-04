@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Market Report - Past 30 Days</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a237e, #4a148c);
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .report-date {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+        .section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        .section-title {
+            color: #4a148c;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .chart-container {
+            margin-bottom: 2rem;
+        }
+        .chart-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .news-item {
+            padding: 1rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .news-date {
+            font-size: 0.85rem;
+            color: #666;
+        }
+        .news-title {
+            font-weight: 600;
+            margin: 0.5rem 0;
+        }
+        .news-source {
+            font-size: 0.85rem;
+            color: #666;
+        }
+        .positive {
+            color: #4caf50;
+        }
+        .negative {
+            color: #f44336;
+        }
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .crypto-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+        .crypto-card:hover {
+            transform: translateY(-5px);
+        }
+        .crypto-header {
+            padding: 1rem;
+            background-color: #f5f5f5;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .crypto-body {
+            padding: 1rem;
+        }
+        .crypto-name {
+            font-weight: 600;
+            margin: 0;
+        }
+        .crypto-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0.5rem 0;
+        }
+        .crypto-change {
+            font-weight: 600;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        .market-stats {
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .stat-value {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="header text-center">
+        <div class="container">
+            <h1 class="display-4">Crypto Market Report</h1>
+            <p class="report-date">Past 30 Days Analysis | Generated on {{GENERATION_DATE}}</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Market Overview Section -->
+        <div class="section">
+            <h2 class="section-title">Market Overview</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="market-stats mb-4">
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="stat-label">Total Market Cap</p>
+                                <p class="stat-value">{{TOTAL_MARKET_CAP}}</p>
+                            </div>
+                            <div class="col-6">
+                                <p class="stat-label">30-Day Market Change</p>
+                                <p class="stat-value {{MARKET_CHANGE_CLASS}}">{{MARKET_CHANGE}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        {{MARKET_OVERVIEW_TEXT}}
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="chart-container">
+                        <img src="images/market_dominance.png" alt="Market Dominance" class="chart-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Performance Comparison Section -->
+        <div class="section">
+            <h2 class="section-title">Performance Comparison</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="chart-container">
+                        <img src="images/performance_comparison.png" alt="Performance Comparison" class="chart-img">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="chart-container">
+                        <img src="images/performance_ranking.png" alt="Performance Ranking" class="chart-img">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="chart-container">
+                        <img src="images/correlation_heatmap.png" alt="Correlation Heatmap" class="chart-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Individual Cryptocurrencies Section -->
+        <div class="section">
+            <h2 class="section-title">Top Cryptocurrencies</h2>
+            
+            <!-- Bitcoin -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="crypto-card">
+                        <div class="crypto-header">
+                            <h3 class="crypto-name">Bitcoin (BTC)</h3>
+                            <p class="crypto-price">{{BTC_PRICE}}</p>
+                            <span class="crypto-change {{BTC_CHANGE_CLASS}}">{{BTC_CHANGE}}</span>
+                        </div>
+                        <div class="crypto-body">
+                            <div class="chart-container">
+                                <img src="images/bitcoin_price.png" alt="Bitcoin Price Chart" class="chart-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="chart-container">
+                        <img src="images/bitcoin_volume.png" alt="Bitcoin Volume Chart" class="chart-img">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ethereum -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="crypto-card">
+                        <div class="crypto-header">
+                            <h3 class="crypto-name">Ethereum (ETH)</h3>
+                            <p class="crypto-price">{{ETH_PRICE}}</p>
+                            <span class="crypto-change {{ETH_CHANGE_CLASS}}">{{ETH_CHANGE}}</span>
+                        </div>
+                        <div class="crypto-body">
+                            <div class="chart-container">
+                                <img src="images/ethereum_price.png" alt="Ethereum Price Chart" class="chart-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="chart-container">
+                        <img src="images/ethereum_volume.png" alt="Ethereum Volume Chart" class="chart-img">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Other Top Cryptocurrencies -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="crypto-card">
+                        <div class="crypto-header">
+                            <h3 class="crypto-name">Binance Coin (BNB)</h3>
+                            <p class="crypto-price">{{BNB_PRICE}}</p>
+                            <span class="crypto-change {{BNB_CHANGE_CLASS}}">{{BNB_CHANGE}}</span>
+                        </div>
+                        <div class="crypto-body">
+                            <div class="chart-container">
+                                <img src="images/binancecoin_price.png" alt="Binance Coin Price Chart" class="chart-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="crypto-card">
+                        <div class="crypto-header">
+                            <h3 class="crypto-name">Solana (SOL)</h3>
+                            <p class="crypto-price">{{SOL_PRICE}}</p>
+                            <span class="crypto-change {{SOL_CHANGE_CLASS}}">{{SOL_CHANGE}}</span>
+                        </div>
+                        <div class="crypto-body">
+                            <div class="chart-container">
+                                <img src="images/solana_price.png" alt="Solana Price Chart" class="chart-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Market News Section -->
+        <div class="section">
+            <h2 class="section-title">Market News Highlights</h2>
+            <div class="news-container">
+                {{NEWS_ITEMS}}
+            </div>
+        </div>
+
+        <!-- Market Outlook Section -->
+        <div class="section">
+            <h2 class="section-title">Market Outlook</h2>
+            <p>
+                {{MARKET_OUTLOOK_TEXT}}
+            </p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p>This report is for informational purposes only and does not constitute financial advice.</p>
+            <p>Generated by Thesis Capsule Agent | Data source: CoinGecko API</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

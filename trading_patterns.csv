@@ -1,0 +1,29 @@
+whale_id,pattern,description,reliability,strategy,recommended_action
+Whale_1,Contrarian Trading,"Whale Whale_1 shows low correlation (0.49) with market movements, suggesting contrarian trading strategies that may perform well in market reversals.",Medium,Contrarian,Consider for hedging
+Whale_1,Improving Performance,Whale Whale_1 shows improving performance with recent win rate (48.43%) significantly higher than historical (40.99%).,Medium,Adaptive,Worth monitoring closely
+Whale_1,Concentrated Portfolio,"Whale Whale_1 has a highly concentrated portfolio with 71.04% in a single position, indicating high conviction but also higher risk.",Medium,High Conviction,Consider with proper position sizing
+Whale_1,Consistent High Win Rate,"Whale Whale_1 maintains a high win rate of 69.23% historically and 70.95% recently, suggesting a robust and consistent strategy.",High,Scalping,Follow with caution
+Whale_1,Contrarian Trading,"Whale Whale_1 shows low correlation (0.42) with market movements, suggesting contrarian trading strategies that may perform well in market reversals.",Medium,Contrarian,Consider for hedging
+Whale_1,Long-Term Holder,"Whale Whale_1 holds positions for extended periods (53.7 days on average), suggesting a long-term investment approach.",High,Position Trading,Good for long-term investors
+Whale_1,Consistent High Win Rate,"Whale Whale_1 maintains a high win rate of 63.15% historically and 71.29% recently, suggesting a robust and consistent strategy.",High,Day Trading,Follow with caution
+Whale_1,Improving Performance,Whale Whale_1 shows improving performance with recent win rate (71.29%) significantly higher than historical (63.15%).,Medium,Adaptive,Worth monitoring closely
+Whale_1,Consistent High Win Rate,"Whale Whale_1 maintains a high win rate of 74.03% historically and 80.28% recently, suggesting a robust and consistent strategy.",High,Day Trading,Follow with caution
+Whale_3,Contrarian Trading,"Whale Whale_3 shows low correlation (0.32) with market movements, suggesting contrarian trading strategies that may perform well in market reversals.",Medium,Contrarian,Consider for hedging
+Whale_3,Aggressive Trading,"Whale Whale_3 uses high leverage (3x) and experiences large drawdowns (42.45%), indicating an aggressive approach.",Low,Aggressive,"High risk, follow with extreme caution"
+Whale_3,Improving Performance,Whale Whale_3 shows improving performance with recent win rate (52.30%) significantly higher than historical (39.48%).,Medium,Adaptive,Worth monitoring closely
+Whale_1,Momentum Trading,"Whale Whale_1 shows high correlation (0.79) with market movements and high trading frequency (11 trades/week), suggesting momentum-based strategies.",Medium,Momentum,Follow during trending markets
+Whale_1,Improving Performance,Whale Whale_1 shows improving performance with recent win rate (33.74%) significantly higher than historical (26.22%).,Medium,Adaptive,Worth monitoring closely
+Whale_22,Consistent High Win Rate,"Whale Whale_22 maintains a high win rate of 95.00% historically and 93.06% recently, suggesting a robust and consistent strategy.",High,Swing Trading,Follow with caution
+Whale_22,Contrarian Trading,"Whale Whale_22 shows low correlation (0.34) with market movements, suggesting contrarian trading strategies that may perform well in market reversals.",Medium,Contrarian,Consider for hedging
+Whale_41,Consistent High Win Rate,"Whale Whale_41 maintains a high win rate of 95.00% historically and 89.45% recently, suggesting a robust and consistent strategy.",High,Swing Trading,Follow with caution
+Whale_41,Long-Term Holder,"Whale Whale_41 holds positions for extended periods (52.0 days on average), suggesting a long-term investment approach.",High,Position Trading,Good for long-term investors
+Whale_41,Concentrated Portfolio,"Whale Whale_41 has a highly concentrated portfolio with 74.06% in a single position, indicating high conviction but also higher risk.",Medium,High Conviction,Consider with proper position sizing
+Whale_27,Consistent High Win Rate,"Whale Whale_27 maintains a high win rate of 92.45% historically and 82.45% recently, suggesting a robust and consistent strategy.",High,Day Trading,Follow with caution
+Whale_27,Deteriorating Performance,Whale Whale_27 shows deteriorating performance with recent win rate (82.45%) significantly lower than historical (92.45%).,Medium,Struggling,Avoid following until improvement
+Whale_27,Concentrated Portfolio,"Whale Whale_27 has a highly concentrated portfolio with 51.70% in a single position, indicating high conviction but also higher risk.",Medium,High Conviction,Consider with proper position sizing
+Whale_32,Consistent High Win Rate,"Whale Whale_32 maintains a high win rate of 91.01% historically and 91.61% recently, suggesting a robust and consistent strategy.",High,Position Trading,Follow with caution
+Whale_32,Risk-Averse Trading,"Whale Whale_32 maintains low drawdowns (14.51%) and high risk-adjusted returns (Sharpe: 1.73), suggesting a risk-averse approach.",High,Risk-Averse,Good for conservative investors
+Whale_32,Short-Term Trader,"Whale Whale_32 holds positions for short periods (12.9 days) and trades frequently (16 trades/week), indicating a short-term trading approach.",Medium,Scalping/Day Trading,Requires quick execution and monitoring
+Whale_49,Consistent High Win Rate,"Whale Whale_49 maintains a high win rate of 90.07% historically and 86.63% recently, suggesting a robust and consistent strategy.",High,Swing Trading,Follow with caution
+Whale_49,Momentum Trading,"Whale Whale_49 shows high correlation (0.79) with market movements and high trading frequency (19 trades/week), suggesting momentum-based strategies.",Medium,Momentum,Follow during trending markets
+Whale_49,Concentrated Portfolio,"Whale Whale_49 has a highly concentrated portfolio with 51.04% in a single position, indicating high conviction but also higher risk.",Medium,High Conviction,Consider with proper position sizing
