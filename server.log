@@ -1,0 +1,26 @@
+Server started at http://localhost:51777
+Open your browser and navigate to http://localhost:51777/vietnam_stock_report.html
+Press Ctrl+C to stop the server
+127.0.0.1 - - [05/Apr/2025 13:41:10] "GET /vietnam_stock_report.html HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2025 13:41:10] "GET /stock_images/vn_indices_performance.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2025 13:41:10] "GET /stock_images/vn_index_technical.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2025 13:41:10] "GET /stock_images/vn_index_candlestick.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2025 13:41:10] "GET /stock_images/vn_index_volume.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2025 13:41:10] "GET /stock_images/sector_performance.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2025 13:41:10] "GET /stock_images/top_movers.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2025 13:41:10] "GET /stock_images/correlation_heatmap.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2025 13:41:10] "GET /stock_images/market_breadth.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2025 13:41:10] "GET /stock_images/vn_index_forecast.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2025 13:41:10] code 404, message File not found
+127.0.0.1 - - [05/Apr/2025 13:41:10] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [05/Apr/2025 13:46:17] "GET /vietnam_stock_report.html HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2025 13:46:17] "GET /stock_images/vn_indices_performance.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2025 13:46:17] "GET /stock_images/vn_index_technical.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2025 13:46:17] "GET /stock_images/vn_index_candlestick.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2025 13:46:17] "GET /stock_images/vn_index_volume.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2025 13:46:17] "GET /stock_images/sector_performance.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2025 13:46:17] "GET /stock_images/top_movers.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2025 13:46:17] "GET /stock_images/market_breadth.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2025 13:46:17] "GET /stock_images/correlation_heatmap.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2025 13:46:17] "GET /stock_images/vn_index_forecast.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2025 13:55:28] "GET /vietnam_stock_report_updated.md HTTP/1.1" 200 -
