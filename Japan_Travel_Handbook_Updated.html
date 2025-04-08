@@ -205,6 +205,32 @@
             transition: max-height 0.2s ease-out;
             margin-bottom: 10px;
         }
+        .transport-info {
+            background-color: #E6F7FF;
+            border-left: 4px solid #1890FF;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .transport-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        .transport-table th, .transport-table td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .transport-table th {
+            background-color: #f2f2f2;
+        }
+        .highlight {
+            background-color: #FFFDE7;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -218,6 +244,7 @@
     <nav>
         <ul>
             <li><a href="#itinerary">Itinerary</a></li>
+            <li><a href="#transportation">Transportation</a></li>
             <li><a href="#maps">Maps</a></li>
             <li><a href="#attractions">Attractions</a></li>
             <li><a href="#proposal">Proposal Spots</a></li>
@@ -238,6 +265,21 @@
                     <p><strong>Morning:</strong> Arrive at Narita/Haneda Airport</p>
                     <p><strong>Afternoon:</strong> Check into hotel, visit Asakusa district and Senso-ji Temple, explore Nakamise Shopping Street</p>
                     <p><strong>Evening:</strong> Ueno Park for cherry blossoms (if still in bloom), dinner at local izakaya</p>
+                    
+                    <div class="transport-info">
+                        <h4>Transportation Details:</h4>
+                        <p><strong>Airport to Tokyo:</strong></p>
+                        <ul>
+                            <li><strong>From Narita Airport:</strong> Take the Narita Express (N'EX) to Tokyo Station (¥3,070, ~60 minutes, covered by JR Pass)</li>
+                            <li><strong>From Haneda Airport:</strong> Take the Tokyo Monorail to Hamamatsucho Station (¥500, ~20 minutes, covered by JR Pass), then transfer to JR Yamanote Line</li>
+                        </ul>
+                        <p><strong>Around Tokyo:</strong></p>
+                        <ul>
+                            <li>Asakusa: Take the Tokyo Metro Ginza Line to Asakusa Station (¥170-220 depending on starting point)</li>
+                            <li>Ueno: Take the JR Yamanote Line to Ueno Station (covered by JR Pass)</li>
+                        </ul>
+                        <p><strong>Recommended Pass:</strong> Activate your 7-day JR Pass today and purchase a 24-hour Tokyo Metro Pass (¥800) for efficient city travel</p>
+                    </div>
                 </div>
             </div>
             
@@ -248,6 +290,24 @@
                     <p><strong>Morning:</strong> Meiji Shrine and surrounding gardens</p>
                     <p><strong>Afternoon:</strong> Shinjuku Gyoen National Garden, Tokyo National Museum</p>
                     <p><strong>Evening:</strong> Shibuya Crossing and dinner</p>
+                    
+                    <div class="transport-info">
+                        <h4>Transportation Details:</h4>
+                        <p><strong>Morning Route:</strong></p>
+                        <ul>
+                            <li>Hotel to Meiji Shrine: Take JR Yamanote Line to Harajuku Station (covered by JR Pass), 5-minute walk to shrine entrance</li>
+                        </ul>
+                        <p><strong>Afternoon Route:</strong></p>
+                        <ul>
+                            <li>Meiji Shrine to Shinjuku Gyoen: JR Yamanote Line from Harajuku to Shinjuku Station (covered by JR Pass), then 10-minute walk</li>
+                            <li>Shinjuku to Tokyo National Museum: Take JR Yamanote Line to Ueno Station (covered by JR Pass), 5-minute walk to museum</li>
+                        </ul>
+                        <p><strong>Evening Route:</strong></p>
+                        <ul>
+                            <li>Museum to Shibuya: Take JR Yamanote Line from Ueno to Shibuya Station (covered by JR Pass)</li>
+                        </ul>
+                        <p><strong>Recommended Pass:</strong> Continue using your JR Pass for Yamanote Line and 24-hour Tokyo Metro Pass for any subway travel</p>
+                    </div>
                 </div>
             </div>
             
@@ -258,6 +318,25 @@
                     <p><strong>Morning:</strong> Take JR train to Kamakura (1 hour from Tokyo)</p>
                     <p><strong>Afternoon:</strong> Visit Great Buddha (Daibutsu), Hase-dera Temple, Hokokuji Temple for tea ceremony in bamboo garden</p>
                     <p><strong>Evening:</strong> Tsurugaoka Hachimangu Shrine, return to Tokyo</p>
+                    
+                    <div class="transport-info">
+                        <h4>Transportation Details:</h4>
+                        <p><strong>Tokyo to Kamakura:</strong></p>
+                        <ul>
+                            <li>Take the JR Yokosuka Line from Tokyo Station directly to Kamakura Station (¥950, ~60 minutes, covered by JR Pass)</li>
+                            <li>Alternative: JR Shonan-Shinjuku Line from Shinjuku Station to Kamakura (also covered by JR Pass)</li>
+                        </ul>
+                        <p><strong>Around Kamakura:</strong></p>
+                        <ul>
+                            <li>Kamakura Station to Great Buddha: Take the Enoden Line to Hase Station (¥200, not covered by JR Pass), then 5-minute walk</li>
+                            <li>Between temples: Enoden Line connects most major sites (¥200-300 per trip)</li>
+                            <li>Consider the Enoden One-Day Pass (¥600) for unlimited rides on the scenic Enoden Line</li>
+                        </ul>
+                        <p><strong>Return to Tokyo:</strong></p>
+                        <ul>
+                            <li>Kamakura Station to Tokyo Station: JR Yokosuka Line (¥950, covered by JR Pass)</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             
@@ -268,6 +347,26 @@
                     <p><strong>Morning:</strong> Shinkansen to Kyoto (2.5 hours)</p>
                     <p><strong>Afternoon:</strong> Check into Kyoto accommodation, visit Arashiyama Bamboo Grove and Tenryu-ji Temple</p>
                     <p><strong>Evening:</strong> Dinner in Arashiyama</p>
+                    
+                    <div class="transport-info">
+                        <h4>Transportation Details:</h4>
+                        <p><strong>Tokyo to Kyoto:</strong></p>
+                        <ul>
+                            <li>Take the JR Hikari or Kodama Shinkansen from Tokyo Station to Kyoto Station (¥14,170, ~2 hours 40 minutes, covered by JR Pass)</li>
+                            <li>Note: The faster Nozomi Shinkansen is NOT covered by the JR Pass</li>
+                            <li>Reserve seats in advance at any JR ticket office (no extra charge with JR Pass)</li>
+                        </ul>
+                        <p><strong>Kyoto Station to Accommodation:</strong></p>
+                        <ul>
+                            <li>Depending on location: Kyoto city bus (¥230) or subway (¥220-290)</li>
+                        </ul>
+                        <p><strong>To Arashiyama:</strong></p>
+                        <ul>
+                            <li>Take JR Sagano Line from Kyoto Station to Saga-Arashiyama Station (¥240, ~15 minutes, covered by JR Pass)</li>
+                            <li>Alternative: Kyoto City Bus #28 from Kyoto Station (¥230, ~45 minutes)</li>
+                        </ul>
+                        <p><strong>Recommended Pass:</strong> Consider purchasing a one-day Kyoto Bus Pass (¥700) for tomorrow's travel around Kyoto</p>
+                    </div>
                 </div>
             </div>
             
@@ -278,6 +377,26 @@
                     <p><strong>Morning:</strong> Fushimi Inari Shrine (early to avoid crowds)</p>
                     <p><strong>Afternoon:</strong> Zen meditation and tea ceremony at Jushō-in Temple</p>
                     <p><strong>Evening:</strong> <strong>Proposal at Maruyama Park</strong> during sunset, celebratory dinner in Gion district</p>
+                    
+                    <div class="transport-info">
+                        <h4>Transportation Details:</h4>
+                        <p><strong>To Fushimi Inari:</strong></p>
+                        <ul>
+                            <li>Take JR Nara Line from Kyoto Station to Inari Station (¥150, ~5 minutes, covered by JR Pass)</li>
+                            <li>Alternative: Keihan Main Line to Fushimi-Inari Station (¥210, not covered by JR Pass)</li>
+                        </ul>
+                        <p><strong>To Jushō-in Temple (Myoshinji Temple complex):</strong></p>
+                        <ul>
+                            <li>From Inari: Take JR Nara Line back to Kyoto Station (covered by JR Pass), then JR Sagano Line to Hanazono Station (covered by JR Pass), 10-minute walk</li>
+                            <li>Alternative: Kyoto City Bus #26 from Kyoto Station (¥230)</li>
+                        </ul>
+                        <p><strong>To Maruyama Park and Gion:</strong></p>
+                        <ul>
+                            <li>From Myoshinji: Take Kyoto City Bus #51 to Gion (¥230)</li>
+                            <li>Alternative: Subway Karasuma Line to Karasuma-Oike, transfer to Tozai Line to Higashiyama Station (¥260 total)</li>
+                        </ul>
+                        <p><strong>Recommended Pass:</strong> Kyoto Bus Pass (¥700) for unlimited bus rides throughout Kyoto</p>
+                    </div>
                 </div>
             </div>
             
@@ -288,6 +407,25 @@
                     <p><strong>Morning:</strong> Train to Nara (45 minutes from Kyoto)</p>
                     <p><strong>Afternoon:</strong> Nara Park to see the famous deer, Todai-ji Temple with Great Buddha, Kasuga Taisha Shrine</p>
                     <p><strong>Evening:</strong> Return to Kyoto</p>
+                    
+                    <div class="transport-info">
+                        <h4>Transportation Details:</h4>
+                        <p><strong>Kyoto to Nara:</strong></p>
+                        <ul>
+                            <li><strong>JR Option:</strong> Take the JR Miyakoji Rapid Train on the JR Nara Line from Kyoto Station to Nara Station (¥720, ~45 minutes, covered by JR Pass)</li>
+                            <li><strong>Kintetsu Option:</strong> Take the Kintetsu Limited Express from Kyoto Station to Kintetsu-Nara Station (¥1,160, ~35 minutes, NOT covered by JR Pass)</li>
+                        </ul>
+                        <p><strong>Around Nara:</strong></p>
+                        <ul>
+                            <li>Most attractions in Nara are within walking distance of each other</li>
+                            <li>Nara Station to Nara Park: 20-minute walk or Nara City Loop Bus (¥210)</li>
+                            <li>Consider the Nara Park Loop Bus One-day Pass (¥500) for unlimited rides</li>
+                        </ul>
+                        <p><strong>Return to Kyoto:</strong></p>
+                        <ul>
+                            <li>Take the JR Miyakoji Rapid Train from Nara Station to Kyoto Station (¥720, covered by JR Pass)</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             
@@ -298,6 +436,24 @@
                     <p><strong>Morning:</strong> Philosopher's Path walk, Ginkaku-ji (Silver Pavilion)</p>
                     <p><strong>Afternoon:</strong> Kinkaku-ji (Golden Pavilion), Nishiki Market for food and souvenirs</p>
                     <p><strong>Evening:</strong> Gion district for geisha spotting and farewell dinner</p>
+                    
+                    <div class="transport-info">
+                        <h4>Transportation Details:</h4>
+                        <p><strong>To Philosopher's Path & Ginkaku-ji:</strong></p>
+                        <ul>
+                            <li>Take Kyoto City Bus #5, #17, or #100 from Kyoto Station to Ginkakuji-michi Bus Stop (¥230, ~40 minutes)</li>
+                        </ul>
+                        <p><strong>To Kinkaku-ji:</strong></p>
+                        <ul>
+                            <li>From Ginkaku-ji: Take Kyoto City Bus #102 or #204 to Kinkakuji-michi Bus Stop (¥230, ~30 minutes)</li>
+                        </ul>
+                        <p><strong>To Nishiki Market & Gion:</strong></p>
+                        <ul>
+                            <li>From Kinkaku-ji: Take Kyoto City Bus #101 or #205 to Shijo-Kawaramachi (¥230, ~30 minutes)</li>
+                            <li>Nishiki Market to Gion: 10-15 minute walk</li>
+                        </ul>
+                        <p><strong>Recommended Pass:</strong> Kyoto Bus Pass (¥700) for unlimited bus rides throughout Kyoto</p>
+                    </div>
                 </div>
             </div>
             
@@ -307,7 +463,147 @@
                     <h3>Departure from Osaka</h3>
                     <p><strong>Morning:</strong> Train to Osaka Kansai Airport</p>
                     <p><strong>Afternoon:</strong> Departure</p>
+                    
+                    <div class="transport-info">
+                        <h4>Transportation Details:</h4>
+                        <p><strong>Kyoto to Kansai Airport:</strong></p>
+                        <ul>
+                            <li><strong>JR Option:</strong> Take the JR Special Rapid Service to Osaka Station (¥560, ~30 minutes, covered by JR Pass), then transfer to the JR Haruka Limited Express to Kansai Airport (¥1,210, ~50 minutes, covered by JR Pass)</li>
+                            <li><strong>Direct Option:</strong> Limited Express Haruka from Kyoto Station directly to Kansai Airport (¥3,230, ~75 minutes, covered by JR Pass)</li>
+                        </ul>
+                        <p><strong>Note:</strong> Your 7-day JR Pass will still be valid if activated on Day 1 (April 16)</p>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="transportation">
+            <h2>Transportation Guide</h2>
+            
+            <h3>Japan Rail Pass Information</h3>
+            <div class="transport-info">
+                <p>The Japan Rail Pass is a cost-effective option for tourists traveling between cities in Japan. For this itinerary, a 7-day JR Pass is recommended.</p>
+                
+                <table class="transport-table">
+                    <tr>
+                        <th>Pass Type</th>
+                        <th>Duration</th>
+                        <th>Cost (2024)</th>
+                        <th>Activation</th>
+                    </tr>
+                    <tr>
+                        <td>Japan Rail Pass (Ordinary)</td>
+                        <td>7 days</td>
+                        <td>¥50,000 (~$335)</td>
+                        <td>Activate on April 16 (Day 1)</td>
+                    </tr>
+                </table>
+                
+                <h4>What's Covered by JR Pass:</h4>
+                <ul>
+                    <li>All JR trains (including most Shinkansen bullet trains except Nozomi and Mizuho)</li>
+                    <li>Tokyo to Kamakura (JR Yokosuka Line)</li>
+                    <li>Tokyo to Kyoto (Hikari or Kodama Shinkansen)</li>
+                    <li>Kyoto to Nara (JR Nara Line)</li>
+                    <li>Kyoto to Kansai Airport (via JR lines)</li>
+                    <li>JR Yamanote Line in Tokyo (circular line connecting major stations)</li>
+                    <li>JR Sagano Line in Kyoto (to Arashiyama)</li>
+                </ul>
+                
+                <h4>Cost Comparison:</h4>
+                <p>Individual tickets for the major journeys in this itinerary would cost:</p>
+                <ul>
+                    <li>Narita Express (Airport to Tokyo): ¥3,070</li>
+                    <li>Tokyo to Kamakura (round trip): ¥1,900</li>
+                    <li>Tokyo to Kyoto (Shinkansen): ¥14,170</li>
+                    <li>Kyoto to Nara (round trip): ¥1,440</li>
+                    <li>Kyoto to Kansai Airport: ¥3,230</li>
+                    <li>Various JR lines within cities: ~¥2,000</li>
+                </ul>
+                <p><strong>Total without JR Pass: ~¥25,810 (~$173)</strong></p>
+                <p><strong>Savings with JR Pass: ~¥25,810 - ¥50,000 = ~¥24,190 (~$162)</strong></p>
+                
+                <h4>How to Purchase:</h4>
+                <p>Purchase your JR Pass online before traveling to Japan. You'll receive an exchange order that you'll swap for the actual pass at a JR office in Japan (available at major airports and stations).</p>
+            </div>
+            
+            <h3>Tokyo Transportation</h3>
+            <div class="transport-info">
+                <h4>Recommended Passes:</h4>
+                <table class="transport-table">
+                    <tr>
+                        <th>Pass Name</th>
+                        <th>Coverage</th>
+                        <th>Cost</th>
+                        <th>Best For</th>
+                    </tr>
+                    <tr>
+                        <td>24-hour Tokyo Metro Pass</td>
+                        <td>All Tokyo Metro and Toei Subway lines</td>
+                        <td>¥800 (~$5.40)</td>
+                        <td>Days 1-2 in Tokyo</td>
+                    </tr>
+                    <tr>
+                        <td>72-hour Tokyo Metro Pass</td>
+                        <td>All Tokyo Metro and Toei Subway lines</td>
+                        <td>¥1,500 (~$10)</td>
+                        <td>Alternative if staying longer in Tokyo</td>
+                    </tr>
+                    <tr>
+                        <td>Suica/Pasmo IC Card</td>
+                        <td>Pay-as-you-go for all trains, buses, and some stores</td>
+                        <td>¥2,000 initial charge (¥500 refundable deposit)</td>
+                        <td>Convenience for all transportation</td>
+                    </tr>
+                </table>
+                
+                <h4>Key Tokyo Transit Lines:</h4>
+                <ul>
+                    <li><strong>JR Yamanote Line:</strong> Circular line connecting major areas (Tokyo, Shinjuku, Shibuya, Ueno) - covered by JR Pass</li>
+                    <li><strong>Tokyo Metro Ginza Line:</strong> Connects Asakusa, Ueno, and central Tokyo</li>
+                    <li><strong>Tokyo Metro Marunouchi Line:</strong> Connects Tokyo Station, Ginza, and Shinjuku</li>
+                </ul>
+            </div>
+            
+            <h3>Kyoto Transportation</h3>
+            <div class="transport-info">
+                <h4>Recommended Passes:</h4>
+                <table class="transport-table">
+                    <tr>
+                        <th>Pass Name</th>
+                        <th>Coverage</th>
+                        <th>Cost</th>
+                        <th>Best For</th>
+                    </tr>
+                    <tr>
+                        <td>Kyoto City Bus One-Day Pass</td>
+                        <td>Unlimited rides on Kyoto City buses and subway</td>
+                        <td>¥700 (~$4.70)</td>
+                        <td>Days 5 and 7 in Kyoto</td>
+                    </tr>
+                    <tr>
+                        <td>Kyoto-Osaka Sightseeing Pass (1-day)</td>
+                        <td>Unlimited travel on non-JR trains and buses in Kyoto and Osaka area</td>
+                        <td>¥1,400 (~$9.40)</td>
+                        <td>If planning to visit both Kyoto and Osaka</td>
+                    </tr>
+                </table>
+                
+                <h4>Key Kyoto Transit Options:</h4>
+                <ul>
+                    <li><strong>Kyoto City Bus:</strong> Extensive network covering most tourist sites (¥230 per ride)</li>
+                    <li><strong>Kyoto Subway:</strong> Two lines (Karasuma and Tozai) connecting major areas</li>
+                    <li><strong>JR Lines:</strong> JR Sagano Line to Arashiyama, JR Nara Line to Fushimi Inari and Nara (covered by JR Pass)</li>
+                </ul>
+            </div>
+            
+            <h3>Nara Transportation</h3>
+            <div class="transport-info">
+                <p>Most attractions in Nara are within walking distance once you arrive. For those who prefer not to walk:</p>
+                <ul>
+                    <li><strong>Nara Park Loop Bus:</strong> Connects Nara Station, Kintetsu-Nara Station, and major attractions (¥210 per ride)</li>
+                    <li><strong>Nara Park Loop Bus One-day Pass:</strong> ¥500 for unlimited rides</li>
+                </ul>
             </div>
         </section>
 
@@ -405,6 +701,7 @@
                 <p>Kyoto's most famous cherry blossom viewing spot, especially beautiful at sunset. The park's centerpiece is a large weeping cherry tree that is illuminated in the evenings.</p>
                 <p><strong>Best time:</strong> Sunset (around 6:00-6:30 PM in April)</p>
                 <p><strong>Tips:</strong> Find a quiet spot away from crowds, perhaps near the pond or under the famous weeping cherry tree.</p>
+                <p><strong>How to get there:</strong> From Kyoto Station, take bus #100 or #206 to Gion Bus Stop (¥230, ~30 minutes), then a 5-minute walk</p>
             </div>
             
             <h3>Alternative Proposal Locations</h3>
@@ -412,16 +709,19 @@
             <div class="attraction">
                 <h3>Chidorigafuchi Park (Tokyo)</h3>
                 <p>Rent a rowboat and propose while surrounded by cherry blossoms reflecting on the water of the Imperial Palace moat.</p>
+                <p><strong>How to get there:</strong> Take Tokyo Metro Tozai Line to Kudanshita Station (Exit 2), 5-minute walk</p>
             </div>
             
             <div class="attraction">
                 <h3>Philosopher's Path (Kyoto)</h3>
                 <p>A romantic stone path lined with cherry trees, offering several quiet spots perfect for an intimate proposal.</p>
+                <p><strong>How to get there:</strong> Take bus #5, #17, or #100 from Kyoto Station to Ginkakuji-michi Bus Stop (¥230)</p>
             </div>
             
             <div class="attraction">
                 <h3>Kiyomizu-dera Temple (Kyoto)</h3>
                 <p>The wooden terrace offers a spectacular view of Kyoto, especially magical at sunset or when illuminated at night.</p>
+                <p><strong>How to get there:</strong> Take bus #100, #206 or #207 from Kyoto Station to Kiyomizu-michi Bus Stop (¥230)</p>
             </div>
         </section>
 
@@ -497,9 +797,10 @@
             
             <div class="tip-card">
                 <h3>Transportation</h3>
-                <p><strong>Japan Rail Pass:</strong> Activate your 7-day JR Pass upon arrival. The pass costs approximately $300 per person and covers all JR trains including most Shinkansen (bullet trains).</p>
+                <p><strong>Japan Rail Pass:</strong> Activate your 7-day JR Pass upon arrival. The pass costs approximately ¥50,000 (~$335) per person and covers all JR trains including most Shinkansen (bullet trains).</p>
                 <p><strong>IC Cards:</strong> Purchase a Suica or Pasmo card for convenient travel on non-JR lines and city metros. These can also be used for convenience store purchases.</p>
                 <p><strong>Google Maps:</strong> Works extremely well in Japan for public transportation directions.</p>
+                <p><strong>Train Etiquette:</strong> Avoid talking on phones, eating on local trains (Shinkansen is fine), and taking up extra seats with luggage.</p>
             </div>
             
             <div class="tip-card">
@@ -553,7 +854,7 @@
                 <tr>
                     <td>Transportation</td>
                     <td>$600-700</td>
-                    <td>Including 7-day JR Pass (~$300/person)</td>
+                    <td>Including 7-day JR Pass (~$335/person)</td>
                 </tr>
                 <tr>
                     <td>Food</td>
