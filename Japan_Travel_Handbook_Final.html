@@ -1,1140 +1,1841 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Japan Travel Handbook</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-        }
-        body {
-            line-height: 1.6;
-            color: #333;
-            max-width: 100%;
-            overflow-x: hidden;
-            background-color: #f9f9f9;
-        }
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 15px;
-        }
-        header {
-            background-color: #D73E48;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-bottom: 20px;
-            background-image: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-        header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        header h1, header p {
-            position: relative;
-            z-index: 1;
-        }
-        nav {
-            background-color: #333;
-            overflow: hidden;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+      }
+      body {
+        line-height: 1.6;
+        color: #333;
+        max-width: 100%;
+        overflow-x: hidden;
+        background-color: #f9f9f9;
+      }
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 15px;
+      }
+      header {
+        background-color: #d73e48;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        margin-bottom: 20px;
+        background-image: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+      header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      header h1,
+      header p {
+        position: relative;
+        z-index: 1;
+      }
+      nav {
+        background-color: #333;
+        overflow: hidden;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        justify-content: center;
+      }
+      nav ul li {
+        padding: 10px 15px;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+      nav ul li a:hover {
+        color: #d73e48;
+      }
+      section {
+        margin-bottom: 30px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      h1,
+      h2,
+      h3 {
+        color: #d73e48;
+        margin-bottom: 15px;
+      }
+      h2 {
+        border-bottom: 2px solid #d73e48;
+        padding-bottom: 10px;
+      }
+      p {
+        margin-bottom: 15px;
+      }
+      .day-card {
+        margin-bottom: 20px;
+        border-left: 4px solid #d73e48;
+        padding-left: 15px;
+      }
+      .map-container {
+        width: 100%;
+        height: 400px;
+        margin: 20px 0;
+      }
+      .map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 5px;
+      }
+      .attraction {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+      }
+      .attraction:last-child {
+        border-bottom: none;
+      }
+      .attraction h3 {
+        color: #333;
+        margin-bottom: 5px;
+      }
+      .phrase-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+      .phrase-table th,
+      .phrase-table td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      .phrase-table th {
+        background-color: #f2f2f2;
+      }
+      .tip-card {
+        background-color: #f8f8f8;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        border-left: 4px solid #4caf50;
+      }
+      .proposal-section {
+        background-color: #fff9f9;
+        border: 1px solid #ffd1d1;
+        padding: 20px;
+        border-radius: 5px;
+        margin: 20px 0;
+      }
+      .proposal-section h3 {
+        color: #d73e48;
+      }
+      .budget-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+      .budget-table th,
+      .budget-table td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      .budget-table th {
+        background-color: #f2f2f2;
+      }
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: white;
+        margin-top: 30px;
+      }
+      @media (max-width: 768px) {
         nav ul {
-            display: flex;
-            flex-wrap: wrap;
-            list-style-type: none;
-            justify-content: center;
+          flex-direction: column;
         }
         nav ul li {
-            padding: 10px 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        nav ul li a:hover {
-            color: #D73E48;
-        }
-        section {
-            margin-bottom: 30px;
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        h1, h2, h3 {
-            color: #D73E48;
-            margin-bottom: 15px;
-        }
-        h2 {
-            border-bottom: 2px solid #D73E48;
-            padding-bottom: 10px;
-        }
-        p {
-            margin-bottom: 15px;
-        }
-        .day-card {
-            margin-bottom: 20px;
-            border-left: 4px solid #D73E48;
-            padding-left: 15px;
+          text-align: center;
         }
         .map-container {
-            width: 100%;
-            height: 400px;
-            margin: 20px 0;
+          height: 300px;
         }
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: 5px;
+      }
+      .accordion {
+        background-color: #f1f1f1;
+        color: #333;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+        font-weight: bold;
+        border-radius: 5px;
+        margin-bottom: 5px;
+      }
+      .active,
+      .accordion:hover {
+        background-color: #ddd;
+      }
+      .panel {
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        margin-bottom: 10px;
+      }
+      .transport-info {
+        background-color: #e6f7ff;
+        border-left: 4px solid #1890ff;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 5px;
+      }
+      .transport-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 15px 0;
+      }
+      .transport-table th,
+      .transport-table td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      .transport-table th {
+        background-color: #f2f2f2;
+      }
+      .highlight {
+        background-color: #fffde7;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-weight: bold;
+      }
+      .etiquette-card {
+        background-color: #fff8e1;
+        border-left: 4px solid #ffa000;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 5px;
+      }
+      .do-dont-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 15px 0;
+      }
+      .do-dont-table th,
+      .do-dont-table td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      .do-dont-table th {
+        background-color: #f2f2f2;
+      }
+      .do {
+        color: #4caf50;
+        font-weight: bold;
+      }
+      .dont {
+        color: #f44336;
+        font-weight: bold;
+      }
+      .etiquette-icon {
+        font-size: 24px;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+
+      /* Enhanced Responsive Styles */
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 1.8rem;
         }
-        .attraction {
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
+        nav ul {
+          flex-direction: column;
         }
-        .attraction:last-child {
-            border-bottom: none;
+        nav ul li {
+          text-align: center;
+          padding: 8px 0;
         }
-        .attraction h3 {
-            color: #333;
-            margin-bottom: 5px;
+        .map-container {
+          height: 300px;
         }
-        .phrase-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
+        .container {
+          padding: 10px;
         }
-        .phrase-table th, .phrase-table td {
-            padding: 10px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
+        section {
+          padding: 15px;
         }
-        .phrase-table th {
-            background-color: #f2f2f2;
+        .day-card {
+          padding-left: 10px;
         }
+        .transport-info,
+        .etiquette-card,
         .tip-card {
-            background-color: #f8f8f8;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 15px;
-            border-left: 4px solid #4CAF50;
+          padding: 10px;
         }
-        .proposal-section {
-            background-color: #FFF9F9;
-            border: 1px solid #FFD1D1;
-            padding: 20px;
-            border-radius: 5px;
-            margin: 20px 0;
-        }
-        .proposal-section h3 {
-            color: #D73E48;
-        }
-        .budget-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        .budget-table th, .budget-table td {
-            padding: 10px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        .budget-table th {
-            background-color: #f2f2f2;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-            margin-top: 30px;
-        }
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-            }
-            nav ul li {
-                text-align: center;
-            }
-            .map-container {
-                height: 300px;
-            }
+        .do-dont-table th,
+        .do-dont-table td,
+        .phrase-table th,
+        .phrase-table td,
+        .budget-table th,
+        .budget-table td,
+        .transport-table th,
+        .transport-table td {
+          padding: 8px 5px;
+          font-size: 0.9rem;
         }
         .accordion {
-            background-color: #f1f1f1;
-            color: #333;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            text-align: left;
-            border: none;
-            outline: none;
-            transition: 0.4s;
-            font-weight: bold;
-            border-radius: 5px;
-            margin-bottom: 5px;
+          padding: 12px;
         }
-        .active, .accordion:hover {
-            background-color: #ddd;
+      }
+
+      @media (max-width: 480px) {
+        header h1 {
+          font-size: 1.5rem;
         }
-        .panel {
-            padding: 0 18px;
-            background-color: white;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
-            margin-bottom: 10px;
+        header p {
+          font-size: 0.9rem;
         }
-        .transport-info {
-            background-color: #E6F7FF;
-            border-left: 4px solid #1890FF;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 5px;
+        h2 {
+          font-size: 1.4rem;
         }
+        h3 {
+          font-size: 1.2rem;
+        }
+        p,
+        li {
+          font-size: 0.95rem;
+        }
+        .map-container {
+          height: 250px;
+        }
+        .container {
+          padding: 8px;
+        }
+        section {
+          padding: 12px;
+          margin-bottom: 20px;
+        }
+
+        /* Make tables responsive on very small screens */
+        .phrase-table,
+        .budget-table,
+        .do-dont-table,
         .transport-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
+          display: block;
+          overflow-x: auto;
+          white-space: nowrap;
+          -webkit-overflow-scrolling: touch;
         }
-        .transport-table th, .transport-table td {
-            padding: 8px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
+
+        /* Table font size adjustment */
+        .do-dont-table th,
+        .do-dont-table td,
+        .phrase-table th,
+        .phrase-table td,
+        .budget-table th,
+        .budget-table td,
+        .transport-table th,
+        .transport-table td {
+          padding: 6px 4px;
+          font-size: 0.85rem;
         }
-        .transport-table th {
-            background-color: #f2f2f2;
+
+        .accordion {
+          padding: 10px;
+          font-size: 0.95rem;
         }
-        .highlight {
-            background-color: #FFFDE7;
-            padding: 2px 5px;
-            border-radius: 3px;
-            font-weight: bold;
+      }
+
+      /* Medium devices (tablets) */
+      @media (min-width: 769px) and (max-width: 992px) {
+        .container {
+          padding: 12px;
         }
-        .etiquette-card {
-            background-color: #FFF8E1;
-            border-left: 4px solid #FFA000;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 5px;
+        header h1 {
+          font-size: 2rem;
         }
-        .do-dont-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
+        .map-container {
+          height: 350px;
         }
-        .do-dont-table th, .do-dont-table td {
-            padding: 10px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
+      }
+
+      /* Navigation menu toggle for mobile */
+      .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 10px;
+      }
+
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+          width: 100%;
+          text-align: center;
         }
-        .do-dont-table th {
-            background-color: #f2f2f2;
+        nav ul {
+          display: none;
+          width: 100%;
         }
-        .do {
-            color: #4CAF50;
-            font-weight: bold;
+        nav ul.show {
+          display: flex;
         }
-        .dont {
-            color: #F44336;
-            font-weight: bold;
-        }
-        .etiquette-icon {
-            font-size: 24px;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="container">
-            <h1>Japan Travel Handbook</h1>
-            <p>April 15-23, 2024</p>
-        </div>
+      <div class="container">
+        <h1>Japan Travel Handbook</h1>
+        <p>April 15-23, 2024</p>
+      </div>
     </header>
 
     <nav>
-        <ul>
-            <li><a href="#itinerary">Itinerary</a></li>
-            <li><a href="#transportation">Transportation</a></li>
-            <li><a href="#etiquette">Cultural Etiquette</a></li>
-            <li><a href="#maps">Maps</a></li>
-            <li><a href="#attractions">Attractions</a></li>
-            <li><a href="#proposal">Proposal Spots</a></li>
-            <li><a href="#phrases">Japanese Phrases</a></li>
-            <li><a href="#tips">Travel Tips</a></li>
-            <li><a href="#budget">Budget</a></li>
-        </ul>
+      <button class="menu-toggle" id="menuToggle">☰ Menu</button>
+      <ul id="navMenu">
+        <li><a href="#itinerary">Itinerary</a></li>
+        <li><a href="#transportation">Transportation</a></li>
+        <li><a href="#etiquette">Cultural Etiquette</a></li>
+        <li><a href="#maps">Maps</a></li>
+        <li><a href="#attractions">Attractions</a></li>
+        <li><a href="#proposal">Proposal Spots</a></li>
+        <li><a href="#phrases">Japanese Phrases</a></li>
+        <li><a href="#tips">Travel Tips</a></li>
+        <li><a href="#budget">Budget</a></li>
+      </ul>
     </nav>
 
     <div class="container">
-        <section id="itinerary">
-            <h2>7-Day Itinerary</h2>
-            
-            <button class="accordion">Day 1 (April 16): Arrival in Tokyo</button>
-            <div class="panel">
-                <div class="day-card">
-                    <h3>Arrival in Tokyo, Asakusa & Ueno</h3>
-                    <p><strong>Morning:</strong> Arrive at Narita/Haneda Airport</p>
-                    <p><strong>Afternoon:</strong> Check into hotel, visit Asakusa district and Senso-ji Temple, explore Nakamise Shopping Street</p>
-                    <p><strong>Evening:</strong> Ueno Park for cherry blossoms (if still in bloom), dinner at local izakaya</p>
-                    
-                    <div class="transport-info">
-                        <h4>Transportation Details:</h4>
-                        <p><strong>Airport to Tokyo:</strong></p>
-                        <ul>
-                            <li><strong>From Narita Airport:</strong> Take the Narita Express (N'EX) to Tokyo Station (¥3,070, ~60 minutes, covered by JR Pass)</li>
-                            <li><strong>From Haneda Airport:</strong> Take the Tokyo Monorail to Hamamatsucho Station (¥500, ~20 minutes, covered by JR Pass), then transfer to JR Yamanote Line</li>
-                        </ul>
-                        <p><strong>Around Tokyo:</strong></p>
-                        <ul>
-                            <li>Asakusa: Take the Tokyo Metro Ginza Line to Asakusa Station (¥170-220 depending on starting point)</li>
-                            <li>Ueno: Take the JR Yamanote Line to Ueno Station (covered by JR Pass)</li>
-                        </ul>
-                        <p><strong>Recommended Pass:</strong> Activate your 7-day JR Pass today and purchase a 24-hour Tokyo Metro Pass (¥800) for efficient city travel</p>
-                    </div>
-                </div>
-            </div>
-            
-            <button class="accordion">Day 2 (April 17): Tokyo Exploration</button>
-            <div class="panel">
-                <div class="day-card">
-                    <h3>Tokyo - Meiji Shrine, Shinjuku Gyoen, Shibuya</h3>
-                    <p><strong>Morning:</strong> Meiji Shrine and surrounding gardens</p>
-                    <p><strong>Afternoon:</strong> Shinjuku Gyoen National Garden, Tokyo National Museum</p>
-                    <p><strong>Evening:</strong> Shibuya Crossing and dinner</p>
-                    
-                    <div class="transport-info">
-                        <h4>Transportation Details:</h4>
-                        <p><strong>Morning Route:</strong></p>
-                        <ul>
-                            <li>Hotel to Meiji Shrine: Take JR Yamanote Line to Harajuku Station (covered by JR Pass), 5-minute walk to shrine entrance</li>
-                        </ul>
-                        <p><strong>Afternoon Route:</strong></p>
-                        <ul>
-                            <li>Meiji Shrine to Shinjuku Gyoen: JR Yamanote Line from Harajuku to Shinjuku Station (covered by JR Pass), then 10-minute walk</li>
-                            <li>Shinjuku to Tokyo National Museum: Take JR Yamanote Line to Ueno Station (covered by JR Pass), 5-minute walk to museum</li>
-                        </ul>
-                        <p><strong>Evening Route:</strong></p>
-                        <ul>
-                            <li>Museum to Shibuya: Take JR Yamanote Line from Ueno to Shibuya Station (covered by JR Pass)</li>
-                        </ul>
-                        <p><strong>Recommended Pass:</strong> Continue using your JR Pass for Yamanote Line and 24-hour Tokyo Metro Pass for any subway travel</p>
-                    </div>
-                </div>
-            </div>
-            
-            <button class="accordion">Day 3 (April 18): Kamakura Day Trip</button>
-            <div class="panel">
-                <div class="day-card">
-                    <h3>Tokyo - Kamakura Day Trip</h3>
-                    <p><strong>Morning:</strong> Take JR train to Kamakura (1 hour from Tokyo)</p>
-                    <p><strong>Afternoon:</strong> Visit Great Buddha (Daibutsu), Hase-dera Temple, Hokokuji Temple for tea ceremony in bamboo garden</p>
-                    <p><strong>Evening:</strong> Tsurugaoka Hachimangu Shrine, return to Tokyo</p>
-                    
-                    <div class="transport-info">
-                        <h4>Transportation Details:</h4>
-                        <p><strong>Tokyo to Kamakura:</strong></p>
-                        <ul>
-                            <li>Take the JR Yokosuka Line from Tokyo Station directly to Kamakura Station (¥950, ~60 minutes, covered by JR Pass)</li>
-                            <li>Alternative: JR Shonan-Shinjuku Line from Shinjuku Station to Kamakura (also covered by JR Pass)</li>
-                        </ul>
-                        <p><strong>Around Kamakura:</strong></p>
-                        <ul>
-                            <li>Kamakura Station to Great Buddha: Take the Enoden Line to Hase Station (¥200, not covered by JR Pass), then 5-minute walk</li>
-                            <li>Between temples: Enoden Line connects most major sites (¥200-300 per trip)</li>
-                            <li>Consider the Enoden One-Day Pass (¥600) for unlimited rides on the scenic Enoden Line</li>
-                        </ul>
-                        <p><strong>Return to Tokyo:</strong></p>
-                        <ul>
-                            <li>Kamakura Station to Tokyo Station: JR Yokosuka Line (¥950, covered by JR Pass)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <button class="accordion">Day 4 (April 19): Tokyo to Kyoto</button>
-            <div class="panel">
-                <div class="day-card">
-                    <h3>Travel to Kyoto, Arashiyama</h3>
-                    <p><strong>Morning:</strong> Shinkansen to Kyoto (2.5 hours)</p>
-                    <p><strong>Afternoon:</strong> Check into Kyoto accommodation, visit Arashiyama Bamboo Grove and Tenryu-ji Temple</p>
-                    <p><strong>Evening:</strong> Dinner in Arashiyama</p>
-                    
-                    <div class="transport-info">
-                        <h4>Transportation Details:</h4>
-                        <p><strong>Tokyo to Kyoto:</strong></p>
-                        <ul>
-                            <li>Take the JR Hikari or Kodama Shinkansen from Tokyo Station to Kyoto Station (¥14,170, ~2 hours 40 minutes, covered by JR Pass)</li>
-                            <li>Note: The faster Nozomi Shinkansen is NOT covered by the JR Pass</li>
-                            <li>Reserve seats in advance at any JR ticket office (no extra charge with JR Pass)</li>
-                        </ul>
-                        <p><strong>Kyoto Station to Accommodation:</strong></p>
-                        <ul>
-                            <li>Depending on location: Kyoto city bus (¥230) or subway (¥220-290)</li>
-                        </ul>
-                        <p><strong>To Arashiyama:</strong></p>
-                        <ul>
-                            <li>Take JR Sagano Line from Kyoto Station to Saga-Arashiyama Station (¥240, ~15 minutes, covered by JR Pass)</li>
-                            <li>Alternative: Kyoto City Bus #28 from Kyoto Station (¥230, ~45 minutes)</li>
-                        </ul>
-                        <p><strong>Recommended Pass:</strong> Consider purchasing a one-day Kyoto Bus Pass (¥700) for tomorrow's travel around Kyoto</p>
-                    </div>
-                </div>
-            </div>
-            
-            <button class="accordion">Day 5 (April 20): Kyoto</button>
-            <div class="panel">
-                <div class="day-card">
-                    <h3>Kyoto - Fushimi Inari, Zen Temple Experience</h3>
-                    <p><strong>Morning:</strong> Fushimi Inari Shrine (early to avoid crowds)</p>
-                    <p><strong>Afternoon:</strong> Zen meditation and tea ceremony at Jushō-in Temple</p>
-                    <p><strong>Evening:</strong> <strong>Proposal at Maruyama Park</strong> during sunset, celebratory dinner in Gion district</p>
-                    
-                    <div class="transport-info">
-                        <h4>Transportation Details:</h4>
-                        <p><strong>To Fushimi Inari:</strong></p>
-                        <ul>
-                            <li>Take JR Nara Line from Kyoto Station to Inari Station (¥150, ~5 minutes, covered by JR Pass)</li>
-                            <li>Alternative: Keihan Main Line to Fushimi-Inari Station (¥210, not covered by JR Pass)</li>
-                        </ul>
-                        <p><strong>To Jushō-in Temple (Myoshinji Temple complex):</strong></p>
-                        <ul>
-                            <li>From Inari: Take JR Nara Line back to Kyoto Station (covered by JR Pass), then JR Sagano Line to Hanazono Station (covered by JR Pass), 10-minute walk</li>
-                            <li>Alternative: Kyoto City Bus #26 from Kyoto Station (¥230)</li>
-                        </ul>
-                        <p><strong>To Maruyama Park and Gion:</strong></p>
-                        <ul>
-                            <li>From Myoshinji: Take Kyoto City Bus #51 to Gion (¥230)</li>
-                            <li>Alternative: Subway Karasuma Line to Karasuma-Oike, transfer to Tozai Line to Higashiyama Station (¥260 total)</li>
-                        </ul>
-                        <p><strong>Recommended Pass:</strong> Kyoto Bus Pass (¥700) for unlimited bus rides throughout Kyoto</p>
-                    </div>
-                </div>
-            </div>
-            
-            <button class="accordion">Day 6 (April 21): Nara Day Trip</button>
-            <div class="panel">
-                <div class="day-card">
-                    <h3>Nara Day Trip</h3>
-                    <p><strong>Morning:</strong> Train to Nara (45 minutes from Kyoto)</p>
-                    <p><strong>Afternoon:</strong> Nara Park to see the famous deer, Todai-ji Temple with Great Buddha, Kasuga Taisha Shrine</p>
-                    <p><strong>Evening:</strong> Return to Kyoto</p>
-                    
-                    <div class="transport-info">
-                        <h4>Transportation Details:</h4>
-                        <p><strong>Kyoto to Nara:</strong></p>
-                        <ul>
-                            <li><strong>JR Option:</strong> Take the JR Miyakoji Rapid Train on the JR Nara Line from Kyoto Station to Nara Station (¥720, ~45 minutes, covered by JR Pass)</li>
-                            <li><strong>Kintetsu Option:</strong> Take the Kintetsu Limited Express from Kyoto Station to Kintetsu-Nara Station (¥1,160, ~35 minutes, NOT covered by JR Pass)</li>
-                        </ul>
-                        <p><strong>Around Nara:</strong></p>
-                        <ul>
-                            <li>Most attractions in Nara are within walking distance of each other</li>
-                            <li>Nara Station to Nara Park: 20-minute walk or Nara City Loop Bus (¥210)</li>
-                            <li>Consider the Nara Park Loop Bus One-day Pass (¥500) for unlimited rides</li>
-                        </ul>
-                        <p><strong>Return to Kyoto:</strong></p>
-                        <ul>
-                            <li>Take the JR Miyakoji Rapid Train from Nara Station to Kyoto Station (¥720, covered by JR Pass)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <button class="accordion">Day 7 (April 22): Kyoto</button>
-            <div class="panel">
-                <div class="day-card">
-                    <h3>Kyoto - Philosopher's Path, Gion</h3>
-                    <p><strong>Morning:</strong> Philosopher's Path walk, Ginkaku-ji (Silver Pavilion)</p>
-                    <p><strong>Afternoon:</strong> Kinkaku-ji (Golden Pavilion), Nishiki Market for food and souvenirs</p>
-                    <p><strong>Evening:</strong> Gion district for geisha spotting and farewell dinner</p>
-                    
-                    <div class="transport-info">
-                        <h4>Transportation Details:</h4>
-                        <p><strong>To Philosopher's Path & Ginkaku-ji:</strong></p>
-                        <ul>
-                            <li>Take Kyoto City Bus #5, #17, or #100 from Kyoto Station to Ginkakuji-michi Bus Stop (¥230, ~40 minutes)</li>
-                        </ul>
-                        <p><strong>To Kinkaku-ji:</strong></p>
-                        <ul>
-                            <li>From Ginkaku-ji: Take Kyoto City Bus #102 or #204 to Kinkakuji-michi Bus Stop (¥230, ~30 minutes)</li>
-                        </ul>
-                        <p><strong>To Nishiki Market & Gion:</strong></p>
-                        <ul>
-                            <li>From Kinkaku-ji: Take Kyoto City Bus #101 or #205 to Shijo-Kawaramachi (¥230, ~30 minutes)</li>
-                            <li>Nishiki Market to Gion: 10-15 minute walk</li>
-                        </ul>
-                        <p><strong>Recommended Pass:</strong> Kyoto Bus Pass (¥700) for unlimited bus rides throughout Kyoto</p>
-                    </div>
-                </div>
-            </div>
-            
-            <button class="accordion">Day 8 (April 23): Departure</button>
-            <div class="panel">
-                <div class="day-card">
-                    <h3>Departure from Osaka</h3>
-                    <p><strong>Morning:</strong> Train to Osaka Kansai Airport</p>
-                    <p><strong>Afternoon:</strong> Departure</p>
-                    
-                    <div class="transport-info">
-                        <h4>Transportation Details:</h4>
-                        <p><strong>Kyoto to Kansai Airport:</strong></p>
-                        <ul>
-                            <li><strong>JR Option:</strong> Take the JR Special Rapid Service to Osaka Station (¥560, ~30 minutes, covered by JR Pass), then transfer to the JR Haruka Limited Express to Kansai Airport (¥1,210, ~50 minutes, covered by JR Pass)</li>
-                            <li><strong>Direct Option:</strong> Limited Express Haruka from Kyoto Station directly to Kansai Airport (¥3,230, ~75 minutes, covered by JR Pass)</li>
-                        </ul>
-                        <p><strong>Note:</strong> Your 7-day JR Pass will still be valid if activated on Day 1 (April 16)</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <section id="itinerary">
+        <h2>7-Day Itinerary</h2>
 
-        <section id="transportation">
-            <h2>Transportation Guide</h2>
-            
-            <h3>Japan Rail Pass Information</h3>
+        <button class="accordion">Day 1 (April 16): Arrival in Tokyo</button>
+        <div class="panel">
+          <div class="day-card">
+            <h3>Arrival in Tokyo, Asakusa & Ueno</h3>
+            <p><strong>Morning:</strong> Arrive at Narita/Haneda Airport</p>
+            <p>
+              <strong>Afternoon:</strong> Check into hotel, visit Asakusa
+              district and Senso-ji Temple, explore Nakamise Shopping Street
+            </p>
+            <p>
+              <strong>Evening:</strong> Ueno Park for cherry blossoms (if still
+              in bloom), dinner at local izakaya
+            </p>
+
             <div class="transport-info">
-                <p>The Japan Rail Pass is a cost-effective option for tourists traveling between cities in Japan. For this itinerary, a 7-day JR Pass is recommended.</p>
-                
-                <table class="transport-table">
-                    <tr>
-                        <th>Pass Type</th>
-                        <th>Duration</th>
-                        <th>Cost (2024)</th>
-                        <th>Activation</th>
-                    </tr>
-                    <tr>
-                        <td>Japan Rail Pass (Ordinary)</td>
-                        <td>7 days</td>
-                        <td>¥50,000 (~$335)</td>
-                        <td>Activate on April 16 (Day 1)</td>
-                    </tr>
-                </table>
-                
-                <h4>What's Covered by JR Pass:</h4>
-                <ul>
-                    <li>All JR trains (including most Shinkansen bullet trains except Nozomi and Mizuho)</li>
-                    <li>Tokyo to Kamakura (JR Yokosuka Line)</li>
-                    <li>Tokyo to Kyoto (Hikari or Kodama Shinkansen)</li>
-                    <li>Kyoto to Nara (JR Nara Line)</li>
-                    <li>Kyoto to Kansai Airport (via JR lines)</li>
-                    <li>JR Yamanote Line in Tokyo (circular line connecting major stations)</li>
-                    <li>JR Sagano Line in Kyoto (to Arashiyama)</li>
-                </ul>
-                
-                <h4>Cost Comparison:</h4>
-                <p>Individual tickets for the major journeys in this itinerary would cost:</p>
-                <ul>
-                    <li>Narita Express (Airport to Tokyo): ¥3,070</li>
-                    <li>Tokyo to Kamakura (round trip): ¥1,900</li>
-                    <li>Tokyo to Kyoto (Shinkansen): ¥14,170</li>
-                    <li>Kyoto to Nara (round trip): ¥1,440</li>
-                    <li>Kyoto to Kansai Airport: ¥3,230</li>
-                    <li>Various JR lines within cities: ~¥2,000</li>
-                </ul>
-                <p><strong>Total without JR Pass: ~¥25,810 (~$173)</strong></p>
-                <p><strong>Savings with JR Pass: ~¥25,810 - ¥50,000 = ~¥24,190 (~$162)</strong></p>
-                
-                <h4>How to Purchase:</h4>
-                <p>Purchase your JR Pass online before traveling to Japan. You'll receive an exchange order that you'll swap for the actual pass at a JR office in Japan (available at major airports and stations).</p>
+              <h4>Transportation Details:</h4>
+              <p><strong>Airport to Tokyo:</strong></p>
+              <ul>
+                <li>
+                  <strong>From Narita Airport:</strong> Take the Narita Express
+                  (N'EX) to Tokyo Station (¥3,070, ~60 minutes, covered by JR
+                  Pass)
+                </li>
+                <li>
+                  <strong>From Haneda Airport:</strong> Take the Tokyo Monorail
+                  to Hamamatsucho Station (¥500, ~20 minutes, covered by JR
+                  Pass), then transfer to JR Yamanote Line
+                </li>
+              </ul>
+              <p><strong>Around Tokyo:</strong></p>
+              <ul>
+                <li>
+                  Asakusa: Take the Tokyo Metro Ginza Line to Asakusa Station
+                  (¥170-220 depending on starting point)
+                </li>
+                <li>
+                  Ueno: Take the JR Yamanote Line to Ueno Station (covered by JR
+                  Pass)
+                </li>
+              </ul>
+              <p>
+                <strong>Recommended Pass:</strong> Activate your 7-day JR Pass
+                today and purchase a 24-hour Tokyo Metro Pass (¥800) for
+                efficient city travel
+              </p>
             </div>
-            
-            <h3>Tokyo Transportation</h3>
+          </div>
+        </div>
+
+        <button class="accordion">Day 2 (April 17): Tokyo Exploration</button>
+        <div class="panel">
+          <div class="day-card">
+            <h3>Tokyo - Meiji Shrine, Shinjuku Gyoen, Shibuya</h3>
+            <p>
+              <strong>Morning:</strong> Meiji Shrine and surrounding gardens
+            </p>
+            <p>
+              <strong>Afternoon:</strong> Shinjuku Gyoen National Garden, Tokyo
+              National Museum
+            </p>
+            <p><strong>Evening:</strong> Shibuya Crossing and dinner</p>
+
             <div class="transport-info">
-                <h4>Recommended Passes:</h4>
-                <table class="transport-table">
-                    <tr>
-                        <th>Pass Name</th>
-                        <th>Coverage</th>
-                        <th>Cost</th>
-                        <th>Best For</th>
-                    </tr>
-                    <tr>
-                        <td>24-hour Tokyo Metro Pass</td>
-                        <td>All Tokyo Metro and Toei Subway lines</td>
-                        <td>¥800 (~$5.40)</td>
-                        <td>Days 1-2 in Tokyo</td>
-                    </tr>
-                    <tr>
-                        <td>72-hour Tokyo Metro Pass</td>
-                        <td>All Tokyo Metro and Toei Subway lines</td>
-                        <td>¥1,500 (~$10)</td>
-                        <td>Alternative if staying longer in Tokyo</td>
-                    </tr>
-                    <tr>
-                        <td>Suica/Pasmo IC Card</td>
-                        <td>Pay-as-you-go for all trains, buses, and some stores</td>
-                        <td>¥2,000 initial charge (¥500 refundable deposit)</td>
-                        <td>Convenience for all transportation</td>
-                    </tr>
-                </table>
-                
-                <h4>Key Tokyo Transit Lines:</h4>
-                <ul>
-                    <li><strong>JR Yamanote Line:</strong> Circular line connecting major areas (Tokyo, Shinjuku, Shibuya, Ueno) - covered by JR Pass</li>
-                    <li><strong>Tokyo Metro Ginza Line:</strong> Connects Asakusa, Ueno, and central Tokyo</li>
-                    <li><strong>Tokyo Metro Marunouchi Line:</strong> Connects Tokyo Station, Ginza, and Shinjuku</li>
-                </ul>
+              <h4>Transportation Details:</h4>
+              <p><strong>Morning Route:</strong></p>
+              <ul>
+                <li>
+                  Hotel to Meiji Shrine: Take JR Yamanote Line to Harajuku
+                  Station (covered by JR Pass), 5-minute walk to shrine entrance
+                </li>
+              </ul>
+              <p><strong>Afternoon Route:</strong></p>
+              <ul>
+                <li>
+                  Meiji Shrine to Shinjuku Gyoen: JR Yamanote Line from Harajuku
+                  to Shinjuku Station (covered by JR Pass), then 10-minute walk
+                </li>
+                <li>
+                  Shinjuku to Tokyo National Museum: Take JR Yamanote Line to
+                  Ueno Station (covered by JR Pass), 5-minute walk to museum
+                </li>
+              </ul>
+              <p><strong>Evening Route:</strong></p>
+              <ul>
+                <li>
+                  Museum to Shibuya: Take JR Yamanote Line from Ueno to Shibuya
+                  Station (covered by JR Pass)
+                </li>
+              </ul>
+              <p>
+                <strong>Recommended Pass:</strong> Continue using your JR Pass
+                for Yamanote Line and 24-hour Tokyo Metro Pass for any subway
+                travel
+              </p>
             </div>
-            
-            <h3>Kyoto Transportation</h3>
+          </div>
+        </div>
+
+        <button class="accordion">Day 3 (April 18): Kamakura Day Trip</button>
+        <div class="panel">
+          <div class="day-card">
+            <h3>Tokyo - Kamakura Day Trip</h3>
+            <p>
+              <strong>Morning:</strong> Take JR train to Kamakura (1 hour from
+              Tokyo)
+            </p>
+            <p>
+              <strong>Afternoon:</strong> Visit Great Buddha (Daibutsu),
+              Hase-dera Temple, Hokokuji Temple for tea ceremony in bamboo
+              garden
+            </p>
+            <p>
+              <strong>Evening:</strong> Tsurugaoka Hachimangu Shrine, return to
+              Tokyo
+            </p>
+
             <div class="transport-info">
-                <h4>Recommended Passes:</h4>
-                <table class="transport-table">
-                    <tr>
-                        <th>Pass Name</th>
-                        <th>Coverage</th>
-                        <th>Cost</th>
-                        <th>Best For</th>
-                    </tr>
-                    <tr>
-                        <td>Kyoto City Bus One-Day Pass</td>
-                        <td>Unlimited rides on Kyoto City buses and subway</td>
-                        <td>¥700 (~$4.70)</td>
-                        <td>Days 5 and 7 in Kyoto</td>
-                    </tr>
-                    <tr>
-                        <td>Kyoto-Osaka Sightseeing Pass (1-day)</td>
-                        <td>Unlimited travel on non-JR trains and buses in Kyoto and Osaka area</td>
-                        <td>¥1,400 (~$9.40)</td>
-                        <td>If planning to visit both Kyoto and Osaka</td>
-                    </tr>
-                </table>
-                
-                <h4>Key Kyoto Transit Options:</h4>
-                <ul>
-                    <li><strong>Kyoto City Bus:</strong> Extensive network covering most tourist sites (¥230 per ride)</li>
-                    <li><strong>Kyoto Subway:</strong> Two lines (Karasuma and Tozai) connecting major areas</li>
-                    <li><strong>JR Lines:</strong> JR Sagano Line to Arashiyama, JR Nara Line to Fushimi Inari and Nara (covered by JR Pass)</li>
-                </ul>
+              <h4>Transportation Details:</h4>
+              <p><strong>Tokyo to Kamakura:</strong></p>
+              <ul>
+                <li>
+                  Take the JR Yokosuka Line from Tokyo Station directly to
+                  Kamakura Station (¥950, ~60 minutes, covered by JR Pass)
+                </li>
+                <li>
+                  Alternative: JR Shonan-Shinjuku Line from Shinjuku Station to
+                  Kamakura (also covered by JR Pass)
+                </li>
+              </ul>
+              <p><strong>Around Kamakura:</strong></p>
+              <ul>
+                <li>
+                  Kamakura Station to Great Buddha: Take the Enoden Line to Hase
+                  Station (¥200, not covered by JR Pass), then 5-minute walk
+                </li>
+                <li>
+                  Between temples: Enoden Line connects most major sites
+                  (¥200-300 per trip)
+                </li>
+                <li>
+                  Consider the Enoden One-Day Pass (¥600) for unlimited rides on
+                  the scenic Enoden Line
+                </li>
+              </ul>
+              <p><strong>Return to Tokyo:</strong></p>
+              <ul>
+                <li>
+                  Kamakura Station to Tokyo Station: JR Yokosuka Line (¥950,
+                  covered by JR Pass)
+                </li>
+              </ul>
             </div>
-            
-            <h3>Nara Transportation</h3>
+          </div>
+        </div>
+
+        <button class="accordion">Day 4 (April 19): Tokyo to Kyoto</button>
+        <div class="panel">
+          <div class="day-card">
+            <h3>Travel to Kyoto, Arashiyama</h3>
+            <p><strong>Morning:</strong> Shinkansen to Kyoto (2.5 hours)</p>
+            <p>
+              <strong>Afternoon:</strong> Check into Kyoto accommodation, visit
+              Arashiyama Bamboo Grove and Tenryu-ji Temple
+            </p>
+            <p><strong>Evening:</strong> Dinner in Arashiyama</p>
+
             <div class="transport-info">
-                <p>Most attractions in Nara are within walking distance once you arrive. For those who prefer not to walk:</p>
-                <ul>
-                    <li><strong>Nara Park Loop Bus:</strong> Connects Nara Station, Kintetsu-Nara Station, and major attractions (¥210 per ride)</li>
-                    <li><strong>Nara Park Loop Bus One-day Pass:</strong> ¥500 for unlimited rides</li>
-                </ul>
+              <h4>Transportation Details:</h4>
+              <p><strong>Tokyo to Kyoto:</strong></p>
+              <ul>
+                <li>
+                  Take the JR Hikari or Kodama Shinkansen from Tokyo Station to
+                  Kyoto Station (¥14,170, ~2 hours 40 minutes, covered by JR
+                  Pass)
+                </li>
+                <li>
+                  Note: The faster Nozomi Shinkansen is NOT covered by the JR
+                  Pass
+                </li>
+                <li>
+                  Reserve seats in advance at any JR ticket office (no extra
+                  charge with JR Pass)
+                </li>
+              </ul>
+              <p><strong>Kyoto Station to Accommodation:</strong></p>
+              <ul>
+                <li>
+                  Depending on location: Kyoto city bus (¥230) or subway
+                  (¥220-290)
+                </li>
+              </ul>
+              <p><strong>To Arashiyama:</strong></p>
+              <ul>
+                <li>
+                  Take JR Sagano Line from Kyoto Station to Saga-Arashiyama
+                  Station (¥240, ~15 minutes, covered by JR Pass)
+                </li>
+                <li>
+                  Alternative: Kyoto City Bus #28 from Kyoto Station (¥230, ~45
+                  minutes)
+                </li>
+              </ul>
+              <p>
+                <strong>Recommended Pass:</strong> Consider purchasing a one-day
+                Kyoto Bus Pass (¥700) for tomorrow's travel around Kyoto
+              </p>
             </div>
-        </section>
+          </div>
+        </div>
 
-        <section id="etiquette">
-            <h2>Japanese Cultural Etiquette</h2>
-            
-            <p>Understanding and respecting Japanese customs will enhance your experience and help you avoid unintentional cultural misunderstandings. Here are essential etiquette guidelines for your trip:</p>
-            
-            <h3>Temple & Shrine Etiquette</h3>
-            <div class="etiquette-card">
-                <h4>Visiting Shinto Shrines</h4>
-                <table class="do-dont-table">
-                    <tr>
-                        <th>Do</th>
-                        <th>Don't</th>
-                    </tr>
-                    <tr>
-                        <td class="do">✓ Bow slightly when entering through the torii gate</td>
-                        <td class="dont">✗ Walk in the center of the path (reserved for deities)</td>
-                    </tr>
-                    <tr>
-                        <td class="do">✓ Purify yourself at the water pavilion (temizuya) by rinsing hands and mouth</td>
-                        <td class="dont">✗ Drink the water directly from the ladle</td>
-                    </tr>
-                    <tr>
-                        <td class="do">✓ Bow twice, clap twice, bow once when praying at the main hall</td>
-                        <td class="dont">✗ Take photos inside main halls where prohibited</td>
-                    </tr>
-                </table>
-                
-                <h4>Visiting Buddhist Temples</h4>
-                <table class="do-dont-table">
-                    <tr>
-                        <th>Do</th>
-                        <th>Don't</th>
-                    </tr>
-                    <tr>
-                        <td class="do">✓ Remove your shoes when entering temple buildings (look for shoe racks)</td>
-                        <td class="dont">✗ Step on the raised thresholds between rooms</td>
-                    </tr>
-                    <tr>
-                        <td class="do">✓ Bow slightly to the Buddha statues</td>
-                        <td class="dont">✗ Talk loudly or make disruptive noises</td>
-                    </tr>
-                    <tr>
-                        <td class="do">✓ Walk clockwise around pagodas and stupas</td>
-                        <td class="dont">✗ Point directly at Buddha statues or religious objects</td>
-                    </tr>
-                </table>
-                
-                <p><strong>Important Note:</strong> At both shrines and temples, dress modestly with shoulders and knees covered. Remove hats when entering buildings. Follow any specific rules posted at each location.</p>
-            </div>
-            
-            <h3>Dining Etiquette</h3>
-            <div class="etiquette-card">
-                <h4>General Table Manners</h4>
-                <table class="do-dont-table">
-                    <tr>
-                        <th>Do</th>
-                        <th>Don't</th>
-                    </tr>
-                    <tr>
-                        <td class="do">✓ Say "Itadakimasu" before eating (similar to "bon appétit")</td>
-                        <td class="dont">✗ Stick chopsticks upright in rice (resembles funeral rituals)</td>
-                    </tr>
-                    <tr>
-                        <td class="do">✓ Say "Gochisousama deshita" after finishing (thanking for the meal)</td>
-                        <td class="dont">✗ Pass food from chopsticks to chopsticks (resembles funeral ritual)</td>
-                    </tr>
-                    <tr>
-                        <td class="do">✓ Lift small bowls (rice, soup) toward your mouth while eating</td>
-                        <td class="dont">✗ Blow your nose at the table</td>
-                    </tr>
-                    <tr>
-                        <td class="do">✓ Use the opposite end of chopsticks to take food from shared plates</td>
-                        <td class="dont">✗ Waste food (try to finish what you order)</td>
-                    </tr>
-                </table>
-                
-                <h4>Chopstick Etiquette</h4>
-                <ul>
-                    <li>Hold chopsticks toward their end, not in the middle or front third</li>
-                    <li>When not in use, place chopsticks on the chopstick rest (hashioki) or across your plate/bowl</li>
-                    <li>Don't point with chopsticks, wave them around, or use them to spear food</li>
-                    <li>Don't rub chopsticks together (implies the restaurant has poor quality chopsticks)</li>
-                </ul>
-                
-                <h4>Drinking Etiquette</h4>
-                <ul>
-                    <li>Pour drinks for others, not yourself (they will reciprocate)</li>
-                    <li>Hold your glass with both hands when someone is pouring for you</li>
-                    <li>Wait until everyone has a drink before saying "Kanpai" (cheers) and starting to drink</li>
-                </ul>
-                
-                <p><strong>Tipping:</strong> Not customary in Japan and can even cause confusion. No need to tip at restaurants, taxis, or hotels.</p>
-            </div>
-            
-            <h3>Onsen (Hot Spring) Etiquette</h3>
-            <div class="etiquette-card">
-                <p>Visiting an onsen is a quintessential Japanese experience, but it comes with specific rules:</p>
-                
-                <table class="do-dont-table">
-                    <tr>
-                        <th>Do</th>
-                        <th>Don't</th>
-                    </tr>
-                    <tr>
-                        <td class="do">✓ Wash thoroughly at the shower stations before entering the bath</td>
-                        <td class="dont">✗ Wear swimwear in the bath (onsen are nude bathing areas)</td>
-                    </tr>
-                    <tr>
-                        <td class="do">✓ Bring a small towel for modesty (but don't put it in the water)</td>
-                        <td class="dont">✗ Enter with soap or shampoo on your body</td>
-                    </tr>
-                    <tr>
-                        <td class="do">✓ Keep conversations quiet and respectful</td>
-                        <td class="dont">✗ Take photos in the bathing area</td>
-                    </tr>
-                    <tr>
-                        <td class="do">✓ Tie up long hair to keep it out of the water</td>
-                        <td class="dont">✗ Enter if you have large tattoos (some places prohibit them)</td>
-                    </tr>
-                </table>
-                
-                <p><strong>Tattoo Note:</strong> Tattoos have historical associations with organized crime in Japan. While attitudes are changing, some onsen still prohibit guests with tattoos. Look for "tattoo-friendly" onsen or private baths (kashikiri-buro) that can be reserved.</p>
-                
-                <p><strong>Gender Separation:</strong> Most onsen are separated by gender. Make sure to enter the correct side: 男 (otoko) for men and 女 (onna) for women.</p>
-            </div>
-            
-            <h3>Gift-Giving & Omiyage Culture</h3>
-            <div class="etiquette-card">
-                <p>Gift-giving is an important part of Japanese culture, especially the tradition of bringing back souvenirs (omiyage) from your travels:</p>
-                
-                <h4>Omiyage Customs</h4>
-                <ul>
-                    <li>Omiyage are typically regional specialties, often food items that represent the area visited</li>
-                    <li>They are usually individually wrapped items that can be shared among colleagues or family</li>
-                    <li>Quality packaging is important - beautifully wrapped gifts are highly appreciated</li>
-                    <li>If you receive a gift, it's customary to express hesitation before accepting it with both hands</li>
-                </ul>
-                
-                <h4>Gift-Giving Tips</h4>
-                <ul>
-                    <li>Present and receive gifts with both hands and a slight bow</li>
-                    <li>Don't open a gift immediately in front of the giver unless invited to do so</li>
-                    <li>Avoid giving gifts in sets of four or nine (associated with death and suffering)</li>
-                    <li>Consider bringing small gifts from your hometown to give to hosts or guides</li>
-                </ul>
-                
-                <p><strong>Recommended Omiyage to Bring Home:</strong> Regional sweets (Tokyo Banana, Kyoto's yatsuhashi), local sake, traditional crafts, or specialty teas.</p>
-            </div>
-            
-            <h3>General Social Customs</h3>
-            <div class="etiquette-card">
-                <h4>Bowing</h4>
-                <p>Bowing is an important form of greeting and showing respect:</p>
-                <ul>
-                    <li>A casual bow (15° angle) is appropriate for most tourist interactions</li>
-                    <li>Bow with your back straight and eyes downcast</li>
-                    <li>The deeper and longer the bow, the more respect is shown</li>
-                    <li>It's fine to shake hands if offered, but don't initiate it</li>
-                </ul>
-                
-                <h4>Shoes & Slippers</h4>
-                <ul>
-                    <li>Always remove shoes when entering homes, ryokans, and many traditional restaurants</li>
-                    <li>Look for a genkan (entryway) with shoe racks or shelves</li>
-                    <li>Wear slip-on shoes for convenience during your trip</li>
-                    <li>In some places, you'll change into special bathroom slippers when using the toilet (don't forget to change back!)</li>
-                </ul>
-                
-                <h4>Public Behavior</h4>
-                <ul>
-                    <li>Keep voices low in public, especially on trains and buses</li>
-                    <li>Don't eat while walking on the street (except at festivals)</li>
-                    <li>Avoid talking on phones on public transportation</li>
-                    <li>Stand on the left side of escalators in Tokyo (right side in Osaka)</li>
-                    <li>Cover your mouth when coughing or yawning</li>
-                </ul>
-                
-                <h4>Addressing People</h4>
-                <ul>
-                    <li>Use last names with the suffix "-san" (Mr./Ms.) when addressing Japanese people</li>
-                    <li>Wait to be invited before using someone's first name</li>
-                    <li>Business cards (meishi) are exchanged with both hands and a slight bow</li>
-                </ul>
-            </div>
-            
-            <h3>Special Considerations for Your Proposal</h3>
-            <div class="etiquette-card">
-                <p>For your special moment at Maruyama Park or another location:</p>
-                <ul>
-                    <li>Public displays of affection are generally more reserved in Japan - a hug and hand-holding after the proposal is appropriate</li>
-                    <li>If proposing in a crowded area, be mindful of not blocking pathways or disturbing others</li>
-                    <li>Consider learning the Japanese phrase for "Will you marry me?" (Kekkon shite kudasai) as a special touch</li>
-                    <li>If celebrating afterward at a restaurant, inform the staff in advance - they may help arrange something special</li>
-                </ul>
-            </div>
-        </section>
+        <button class="accordion">Day 5 (April 20): Kyoto</button>
+        <div class="panel">
+          <div class="day-card">
+            <h3>Kyoto - Fushimi Inari, Zen Temple Experience</h3>
+            <p>
+              <strong>Morning:</strong> Fushimi Inari Shrine (early to avoid
+              crowds)
+            </p>
+            <p>
+              <strong>Afternoon:</strong> Zen meditation and tea ceremony at
+              Jushō-in Temple
+            </p>
+            <p>
+              <strong>Evening:</strong>
+              <strong>Proposal at Maruyama Park</strong> during sunset,
+              celebratory dinner in Gion district
+            </p>
 
-        <section id="maps">
-            <h2>Interactive Maps</h2>
-            
-            <h3>Tokyo Overview</h3>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207446.24417022394!2d139.60078065!3d35.6684415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b857628235d%3A0xcdd8aef709a2b520!2sTokyo%2C%20Japan!5e0!3m2!1sen!2sus!4v1650000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+            <div class="transport-info">
+              <h4>Transportation Details:</h4>
+              <p><strong>To Fushimi Inari:</strong></p>
+              <ul>
+                <li>
+                  Take JR Nara Line from Kyoto Station to Inari Station (¥150,
+                  ~5 minutes, covered by JR Pass)
+                </li>
+                <li>
+                  Alternative: Keihan Main Line to Fushimi-Inari Station (¥210,
+                  not covered by JR Pass)
+                </li>
+              </ul>
+              <p>
+                <strong>To Jushō-in Temple (Myoshinji Temple complex):</strong>
+              </p>
+              <ul>
+                <li>
+                  From Inari: Take JR Nara Line back to Kyoto Station (covered
+                  by JR Pass), then JR Sagano Line to Hanazono Station (covered
+                  by JR Pass), 10-minute walk
+                </li>
+                <li>
+                  Alternative: Kyoto City Bus #26 from Kyoto Station (¥230)
+                </li>
+              </ul>
+              <p><strong>To Maruyama Park and Gion:</strong></p>
+              <ul>
+                <li>From Myoshinji: Take Kyoto City Bus #51 to Gion (¥230)</li>
+                <li>
+                  Alternative: Subway Karasuma Line to Karasuma-Oike, transfer
+                  to Tozai Line to Higashiyama Station (¥260 total)
+                </li>
+              </ul>
+              <p>
+                <strong>Recommended Pass:</strong> Kyoto Bus Pass (¥700) for
+                unlimited bus rides throughout Kyoto
+              </p>
             </div>
-            
-            <h3>Kyoto Overview</h3>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104939.65192955921!2d135.68130800000002!3d35.0116363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001a8d6cd3cc3f1%3A0xc0961d366bbb1d3d!2sKyoto%2C%20Kyoto%20Prefecture%2C%20Japan!5e0!3m2!1sen!2sus!4v1650000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            
-            <h3>Nara Overview</h3>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52208.15375857!2d135.7830867!3d34.6850869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001a9c6ddeb1bfd%3A0xd54fd05adafd71d2!2sNara%2C%20Nara%20Prefecture%2C%20Japan!5e0!3m2!1sen!2sus!4v1650000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </section>
+          </div>
+        </div>
 
-        <section id="attractions">
-            <h2>Key Attractions</h2>
-            
-            <div class="attraction">
-                <h3>Senso-ji Temple (Tokyo)</h3>
-                <p>Tokyo's oldest temple, dating back to 645 AD. The approach via Nakamise Shopping Street is lined with traditional shops selling souvenirs and snacks.</p>
-                <p><strong>Hours:</strong> Main grounds 24/7, Main hall 6:00 AM - 5:00 PM (Oct-Mar until 4:30 PM)</p>
-                <p><strong>Admission:</strong> Free</p>
-            </div>
-            
-            <div class="attraction">
-                <h3>Meiji Shrine (Tokyo)</h3>
-                <p>Dedicated to Emperor Meiji and Empress Shoken, this Shinto shrine is set in a peaceful forest with approximately 120,000 trees of 365 different species.</p>
-                <p><strong>Hours:</strong> Sunrise to sunset (approximately 5:00 AM - 6:00 PM)</p>
-                <p><strong>Admission:</strong> Free (Inner Garden: 500 yen)</p>
-            </div>
-            
-            <div class="attraction">
-                <h3>Kamakura Great Buddha (Daibutsu)</h3>
-                <p>A bronze statue of Amida Buddha, standing at 13.35 meters tall. Cast in 1252, it's the second tallest bronze Buddha statue in Japan.</p>
-                <p><strong>Hours:</strong> 8:00 AM - 5:30 PM (Oct-Mar until 5:00 PM)</p>
-                <p><strong>Admission:</strong> 300 yen</p>
-            </div>
-            
-            <div class="attraction">
-                <h3>Arashiyama Bamboo Grove (Kyoto)</h3>
-                <p>A stunning natural setting with towering bamboo stalks creating an otherworldly atmosphere. Best visited early morning to avoid crowds.</p>
-                <p><strong>Hours:</strong> 24/7</p>
-                <p><strong>Admission:</strong> Free</p>
-            </div>
-            
-            <div class="attraction">
-                <h3>Fushimi Inari Shrine (Kyoto)</h3>
-                <p>Famous for its thousands of vermilion torii gates that create tunnels along the mountain trails. The hike to the summit takes about 2-3 hours round trip.</p>
-                <p><strong>Hours:</strong> 24/7</p>
-                <p><strong>Admission:</strong> Free</p>
-            </div>
-            
-            <div class="attraction">
-                <h3>Nara Park and Deer</h3>
-                <p>Home to over 1,200 wild sika deer that are considered messengers of the gods. Deer crackers (shika senbei) can be purchased to feed them.</p>
-                <p><strong>Hours:</strong> 24/7</p>
-                <p><strong>Admission:</strong> Free (Deer crackers: 200 yen)</p>
-            </div>
-            
-            <div class="attraction">
-                <h3>Todai-ji Temple (Nara)</h3>
-                <p>Houses the world's largest bronze Buddha statue in the world's largest wooden building. A UNESCO World Heritage site.</p>
-                <p><strong>Hours:</strong> 8:00 AM - 5:00 PM (Nov-Feb until 4:30 PM)</p>
-                <p><strong>Admission:</strong> 600 yen</p>
-            </div>
-            
-            <div class="attraction">
-                <h3>Kinkaku-ji (Golden Pavilion, Kyoto)</h3>
-                <p>A Zen temple whose top two floors are completely covered in gold leaf. Set alongside a reflective pond in a beautiful garden setting.</p>
-                <p><strong>Hours:</strong> 9:00 AM - 5:00 PM</p>
-                <p><strong>Admission:</strong> 500 yen</p>
-            </div>
-            
-            <div class="attraction">
-                <h3>Philosopher's Path (Kyoto)</h3>
-                <p>A stone path following a canal lined with cherry trees. Named after philosopher Nishida Kitaro who used this path for daily meditation.</p>
-                <p><strong>Hours:</strong> 24/7</p>
-                <p><strong>Admission:</strong> Free</p>
-            </div>
-        </section>
+        <button class="accordion">Day 6 (April 21): Nara Day Trip</button>
+        <div class="panel">
+          <div class="day-card">
+            <h3>Nara Day Trip</h3>
+            <p>
+              <strong>Morning:</strong> Train to Nara (45 minutes from Kyoto)
+            </p>
+            <p>
+              <strong>Afternoon:</strong> Nara Park to see the famous deer,
+              Todai-ji Temple with Great Buddha, Kasuga Taisha Shrine
+            </p>
+            <p><strong>Evening:</strong> Return to Kyoto</p>
 
-        <section id="proposal">
-            <h2>Special Proposal Locations</h2>
-            
-            <div class="proposal-section">
-                <h3>Recommended: Maruyama Park (Kyoto)</h3>
-                <p>Kyoto's most famous cherry blossom viewing spot, especially beautiful at sunset. The park's centerpiece is a large weeping cherry tree that is illuminated in the evenings.</p>
-                <p><strong>Best time:</strong> Sunset (around 6:00-6:30 PM in April)</p>
-                <p><strong>Tips:</strong> Find a quiet spot away from crowds, perhaps near the pond or under the famous weeping cherry tree.</p>
-                <p><strong>How to get there:</strong> From Kyoto Station, take bus #100 or #206 to Gion Bus Stop (¥230, ~30 minutes), then a 5-minute walk</p>
+            <div class="transport-info">
+              <h4>Transportation Details:</h4>
+              <p><strong>Kyoto to Nara:</strong></p>
+              <ul>
+                <li>
+                  <strong>JR Option:</strong> Take the JR Miyakoji Rapid Train
+                  on the JR Nara Line from Kyoto Station to Nara Station (¥720,
+                  ~45 minutes, covered by JR Pass)
+                </li>
+                <li>
+                  <strong>Kintetsu Option:</strong> Take the Kintetsu Limited
+                  Express from Kyoto Station to Kintetsu-Nara Station (¥1,160,
+                  ~35 minutes, NOT covered by JR Pass)
+                </li>
+              </ul>
+              <p><strong>Around Nara:</strong></p>
+              <ul>
+                <li>
+                  Most attractions in Nara are within walking distance of each
+                  other
+                </li>
+                <li>
+                  Nara Station to Nara Park: 20-minute walk or Nara City Loop
+                  Bus (¥210)
+                </li>
+                <li>
+                  Consider the Nara Park Loop Bus One-day Pass (¥500) for
+                  unlimited rides
+                </li>
+              </ul>
+              <p><strong>Return to Kyoto:</strong></p>
+              <ul>
+                <li>
+                  Take the JR Miyakoji Rapid Train from Nara Station to Kyoto
+                  Station (¥720, covered by JR Pass)
+                </li>
+              </ul>
             </div>
-            
-            <h3>Alternative Proposal Locations</h3>
-            
-            <div class="attraction">
-                <h3>Chidorigafuchi Park (Tokyo)</h3>
-                <p>Rent a rowboat and propose while surrounded by cherry blossoms reflecting on the water of the Imperial Palace moat.</p>
-                <p><strong>How to get there:</strong> Take Tokyo Metro Tozai Line to Kudanshita Station (Exit 2), 5-minute walk</p>
-            </div>
-            
-            <div class="attraction">
-                <h3>Philosopher's Path (Kyoto)</h3>
-                <p>A romantic stone path lined with cherry trees, offering several quiet spots perfect for an intimate proposal.</p>
-                <p><strong>How to get there:</strong> Take bus #5, #17, or #100 from Kyoto Station to Ginkakuji-michi Bus Stop (¥230)</p>
-            </div>
-            
-            <div class="attraction">
-                <h3>Kiyomizu-dera Temple (Kyoto)</h3>
-                <p>The wooden terrace offers a spectacular view of Kyoto, especially magical at sunset or when illuminated at night.</p>
-                <p><strong>How to get there:</strong> Take bus #100, #206 or #207 from Kyoto Station to Kiyomizu-michi Bus Stop (¥230)</p>
-            </div>
-        </section>
+          </div>
+        </div>
 
-        <section id="phrases">
-            <h2>Essential Japanese Phrases</h2>
-            
-            <table class="phrase-table">
-                <tr>
-                    <th>English</th>
-                    <th>Japanese</th>
-                    <th>Pronunciation</th>
-                </tr>
-                <tr>
-                    <td>Hello</td>
-                    <td>こんにちは</td>
-                    <td>Kon-ni-chi-wa</td>
-                </tr>
-                <tr>
-                    <td>Good morning</td>
-                    <td>おはようございます</td>
-                    <td>O-ha-you go-zai-mas</td>
-                </tr>
-                <tr>
-                    <td>Good evening</td>
-                    <td>こんばんは</td>
-                    <td>Kon-ban-wa</td>
-                </tr>
-                <tr>
-                    <td>Thank you</td>
-                    <td>ありがとうございます</td>
-                    <td>A-ri-ga-tou go-zai-mas</td>
-                </tr>
-                <tr>
-                    <td>You're welcome</td>
-                    <td>どういたしまして</td>
-                    <td>Dou i-ta-shi-ma-shi-te</td>
-                </tr>
-                <tr>
-                    <td>Excuse me</td>
-                    <td>すみません</td>
-                    <td>Su-mi-ma-sen</td>
-                </tr>
-                <tr>
-                    <td>I don't understand</td>
-                    <td>わかりません</td>
-                    <td>Wa-ka-ri-ma-sen</td>
-                </tr>
-                <tr>
-                    <td>Where is the bathroom?</td>
-                    <td>トイレはどこですか？</td>
-                    <td>To-i-re wa do-ko des-ka?</td>
-                </tr>
-                <tr>
-                    <td>How much is this?</td>
-                    <td>これはいくらですか？</td>
-                    <td>Ko-re wa i-ku-ra des-ka?</td>
-                </tr>
-                <tr>
-                    <td>Delicious!</td>
-                    <td>おいしい！</td>
-                    <td>O-i-shi-i!</td>
-                </tr>
-                <tr>
-                    <td>Will you marry me?</td>
-                    <td>結婚してください</td>
-                    <td>Ke-kkon shi-te ku-da-sai</td>
-                </tr>
-            </table>
-        </section>
+        <button class="accordion">Day 7 (April 22): Kyoto</button>
+        <div class="panel">
+          <div class="day-card">
+            <h3>Kyoto - Philosopher's Path, Gion</h3>
+            <p>
+              <strong>Morning:</strong> Philosopher's Path walk, Ginkaku-ji
+              (Silver Pavilion)
+            </p>
+            <p>
+              <strong>Afternoon:</strong> Kinkaku-ji (Golden Pavilion), Nishiki
+              Market for food and souvenirs
+            </p>
+            <p>
+              <strong>Evening:</strong> Gion district for geisha spotting and
+              farewell dinner
+            </p>
 
-        <section id="tips">
-            <h2>Travel Tips</h2>
-            
-            <div class="tip-card">
-                <h3>Transportation</h3>
-                <p><strong>Japan Rail Pass:</strong> Activate your 7-day JR Pass upon arrival. The pass costs approximately ¥50,000 (~$335) per person and covers all JR trains including most Shinkansen (bullet trains).</p>
-                <p><strong>IC Cards:</strong> Purchase a Suica or Pasmo card for convenient travel on non-JR lines and city metros. These can also be used for convenience store purchases.</p>
-                <p><strong>Google Maps:</strong> Works extremely well in Japan for public transportation directions.</p>
-                <p><strong>Train Etiquette:</strong> Avoid talking on phones, eating on local trains (Shinkansen is fine), and taking up extra seats with luggage.</p>
+            <div class="transport-info">
+              <h4>Transportation Details:</h4>
+              <p><strong>To Philosopher's Path & Ginkaku-ji:</strong></p>
+              <ul>
+                <li>
+                  Take Kyoto City Bus #5, #17, or #100 from Kyoto Station to
+                  Ginkakuji-michi Bus Stop (¥230, ~40 minutes)
+                </li>
+              </ul>
+              <p><strong>To Kinkaku-ji:</strong></p>
+              <ul>
+                <li>
+                  From Ginkaku-ji: Take Kyoto City Bus #102 or #204 to
+                  Kinkakuji-michi Bus Stop (¥230, ~30 minutes)
+                </li>
+              </ul>
+              <p><strong>To Nishiki Market & Gion:</strong></p>
+              <ul>
+                <li>
+                  From Kinkaku-ji: Take Kyoto City Bus #101 or #205 to
+                  Shijo-Kawaramachi (¥230, ~30 minutes)
+                </li>
+                <li>Nishiki Market to Gion: 10-15 minute walk</li>
+              </ul>
+              <p>
+                <strong>Recommended Pass:</strong> Kyoto Bus Pass (¥700) for
+                unlimited bus rides throughout Kyoto
+              </p>
             </div>
-            
-            <div class="tip-card">
-                <h3>Etiquette</h3>
-                <p><strong>Shoes:</strong> Remove shoes when entering temples, traditional restaurants, and ryokans (look for shoe lockers).</p>
-                <p><strong>Tipping:</strong> Not customary in Japan. Don't tip at restaurants or for taxis.</p>
-                <p><strong>Eating:</strong> Saying "Itadakimasu" before eating and "Gochisousama deshita" after finishing is appreciated.</p>
-                <p><strong>Temples:</strong> Be respectful, speak quietly, and follow posted rules about photography.</p>
-            </div>
-            
-            <div class="tip-card">
-                <h3>Connectivity</h3>
-                <p><strong>Pocket WiFi/SIM:</strong> Rent a pocket WiFi device at the airport or get a tourist SIM card for data.</p>
-                <p><strong>Free WiFi:</strong> Available at most hotels, many cafes, and some public spaces, but not as ubiquitous as in some countries.</p>
-            </div>
-            
-            <div class="tip-card">
-                <h3>Money</h3>
-                <p><strong>Cash:</strong> Japan is still largely cash-based. Carry sufficient yen, especially for smaller establishments.</p>
-                <p><strong>ATMs:</strong> 7-Eleven ATMs reliably accept foreign cards.</p>
-                <p><strong>Credit Cards:</strong> Major hotels, department stores, and restaurants accept credit cards, but many smaller places don't.</p>
-            </div>
-            
-            <div class="tip-card">
-                <h3>Cultural Experiences</h3>
-                <p><strong>Tea Ceremony:</strong> Book in advance for the Hokokuji Temple tea ceremony in Kamakura.</p>
-                <p><strong>Zen Meditation:</strong> The session at Jushō-in Temple should be booked at least 3 days in advance.</p>
-                <p><strong>Ryokan Stay:</strong> Consider spending one night in a traditional Japanese inn for an authentic experience.</p>
-            </div>
-        </section>
+          </div>
+        </div>
 
-        <section id="budget">
-            <h2>Budget Breakdown</h2>
-            
-            <table class="budget-table">
-                <tr>
-                    <th>Category</th>
-                    <th>Estimated Cost (2 people)</th>
-                    <th>Notes</th>
-                </tr>
-                <tr>
-                    <td>Flights</td>
-                    <td>$1,600-2,000</td>
-                    <td>Seattle to Tokyo, Osaka to Seattle</td>
-                </tr>
-                <tr>
-                    <td>Accommodation</td>
-                    <td>$1,200-1,500</td>
-                    <td>8 nights, mix of mid-range hotels and traditional ryokan</td>
-                </tr>
-                <tr>
-                    <td>Transportation</td>
-                    <td>$600-700</td>
-                    <td>Including 7-day JR Pass (~$335/person)</td>
-                </tr>
-                <tr>
-                    <td>Food</td>
-                    <td>$600-800</td>
-                    <td>$40-50 per day per person</td>
-                </tr>
-                <tr>
-                    <td>Activities & Entrance Fees</td>
-                    <td>$300-400</td>
-                    <td>Temple admissions, tea ceremony, etc.</td>
-                </tr>
-                <tr>
-                    <td>Shopping & Miscellaneous</td>
-                    <td>$300-500</td>
-                    <td>Souvenirs, pocket WiFi, etc.</td>
-                </tr>
-                <tr>
-                    <td><strong>Total Estimated Cost</strong></td>
-                    <td><strong>$4,600-5,900</strong></td>
-                    <td>Can be adjusted based on accommodation choices</td>
-                </tr>
-            </table>
-        </section>
+        <button class="accordion">Day 8 (April 23): Departure</button>
+        <div class="panel">
+          <div class="day-card">
+            <h3>Departure from Osaka</h3>
+            <p><strong>Morning:</strong> Train to Osaka Kansai Airport</p>
+            <p><strong>Afternoon:</strong> Departure</p>
+
+            <div class="transport-info">
+              <h4>Transportation Details:</h4>
+              <p><strong>Kyoto to Kansai Airport:</strong></p>
+              <ul>
+                <li>
+                  <strong>JR Option:</strong> Take the JR Special Rapid Service
+                  to Osaka Station (¥560, ~30 minutes, covered by JR Pass), then
+                  transfer to the JR Haruka Limited Express to Kansai Airport
+                  (¥1,210, ~50 minutes, covered by JR Pass)
+                </li>
+                <li>
+                  <strong>Direct Option:</strong> Limited Express Haruka from
+                  Kyoto Station directly to Kansai Airport (¥3,230, ~75 minutes,
+                  covered by JR Pass)
+                </li>
+              </ul>
+              <p>
+                <strong>Note:</strong> Your 7-day JR Pass will still be valid if
+                activated on Day 1 (April 16)
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="transportation">
+        <h2>Transportation Guide</h2>
+
+        <h3>Japan Rail Pass Information</h3>
+        <div class="transport-info">
+          <p>
+            The Japan Rail Pass is a cost-effective option for tourists
+            traveling between cities in Japan. For this itinerary, a 7-day JR
+            Pass is recommended.
+          </p>
+
+          <table class="transport-table">
+            <tr>
+              <th>Pass Type</th>
+              <th>Duration</th>
+              <th>Cost (2024)</th>
+              <th>Activation</th>
+            </tr>
+            <tr>
+              <td>Japan Rail Pass (Ordinary)</td>
+              <td>7 days</td>
+              <td>¥50,000 (~$335)</td>
+              <td>Activate on April 16 (Day 1)</td>
+            </tr>
+          </table>
+
+          <h4>What's Covered by JR Pass:</h4>
+          <ul>
+            <li>
+              All JR trains (including most Shinkansen bullet trains except
+              Nozomi and Mizuho)
+            </li>
+            <li>Tokyo to Kamakura (JR Yokosuka Line)</li>
+            <li>Tokyo to Kyoto (Hikari or Kodama Shinkansen)</li>
+            <li>Kyoto to Nara (JR Nara Line)</li>
+            <li>Kyoto to Kansai Airport (via JR lines)</li>
+            <li>
+              JR Yamanote Line in Tokyo (circular line connecting major
+              stations)
+            </li>
+            <li>JR Sagano Line in Kyoto (to Arashiyama)</li>
+          </ul>
+
+          <h4>Cost Comparison:</h4>
+          <p>
+            Individual tickets for the major journeys in this itinerary would
+            cost:
+          </p>
+          <ul>
+            <li>Narita Express (Airport to Tokyo): ¥3,070</li>
+            <li>Tokyo to Kamakura (round trip): ¥1,900</li>
+            <li>Tokyo to Kyoto (Shinkansen): ¥14,170</li>
+            <li>Kyoto to Nara (round trip): ¥1,440</li>
+            <li>Kyoto to Kansai Airport: ¥3,230</li>
+            <li>Various JR lines within cities: ~¥2,000</li>
+          </ul>
+          <p><strong>Total without JR Pass: ~¥25,810 (~$173)</strong></p>
+          <p>
+            <strong
+              >Savings with JR Pass: ~¥25,810 - ¥50,000 = ~¥24,190
+              (~$162)</strong
+            >
+          </p>
+
+          <h4>How to Purchase:</h4>
+          <p>
+            Purchase your JR Pass online before traveling to Japan. You'll
+            receive an exchange order that you'll swap for the actual pass at a
+            JR office in Japan (available at major airports and stations).
+          </p>
+        </div>
+
+        <h3>Tokyo Transportation</h3>
+        <div class="transport-info">
+          <h4>Recommended Passes:</h4>
+          <table class="transport-table">
+            <tr>
+              <th>Pass Name</th>
+              <th>Coverage</th>
+              <th>Cost</th>
+              <th>Best For</th>
+            </tr>
+            <tr>
+              <td>24-hour Tokyo Metro Pass</td>
+              <td>All Tokyo Metro and Toei Subway lines</td>
+              <td>¥800 (~$5.40)</td>
+              <td>Days 1-2 in Tokyo</td>
+            </tr>
+            <tr>
+              <td>72-hour Tokyo Metro Pass</td>
+              <td>All Tokyo Metro and Toei Subway lines</td>
+              <td>¥1,500 (~$10)</td>
+              <td>Alternative if staying longer in Tokyo</td>
+            </tr>
+            <tr>
+              <td>Suica/Pasmo IC Card</td>
+              <td>Pay-as-you-go for all trains, buses, and some stores</td>
+              <td>¥2,000 initial charge (¥500 refundable deposit)</td>
+              <td>Convenience for all transportation</td>
+            </tr>
+          </table>
+
+          <h4>Key Tokyo Transit Lines:</h4>
+          <ul>
+            <li>
+              <strong>JR Yamanote Line:</strong> Circular line connecting major
+              areas (Tokyo, Shinjuku, Shibuya, Ueno) - covered by JR Pass
+            </li>
+            <li>
+              <strong>Tokyo Metro Ginza Line:</strong> Connects Asakusa, Ueno,
+              and central Tokyo
+            </li>
+            <li>
+              <strong>Tokyo Metro Marunouchi Line:</strong> Connects Tokyo
+              Station, Ginza, and Shinjuku
+            </li>
+          </ul>
+        </div>
+
+        <h3>Kyoto Transportation</h3>
+        <div class="transport-info">
+          <h4>Recommended Passes:</h4>
+          <table class="transport-table">
+            <tr>
+              <th>Pass Name</th>
+              <th>Coverage</th>
+              <th>Cost</th>
+              <th>Best For</th>
+            </tr>
+            <tr>
+              <td>Kyoto City Bus One-Day Pass</td>
+              <td>Unlimited rides on Kyoto City buses and subway</td>
+              <td>¥700 (~$4.70)</td>
+              <td>Days 5 and 7 in Kyoto</td>
+            </tr>
+            <tr>
+              <td>Kyoto-Osaka Sightseeing Pass (1-day)</td>
+              <td>
+                Unlimited travel on non-JR trains and buses in Kyoto and Osaka
+                area
+              </td>
+              <td>¥1,400 (~$9.40)</td>
+              <td>If planning to visit both Kyoto and Osaka</td>
+            </tr>
+          </table>
+
+          <h4>Key Kyoto Transit Options:</h4>
+          <ul>
+            <li>
+              <strong>Kyoto City Bus:</strong> Extensive network covering most
+              tourist sites (¥230 per ride)
+            </li>
+            <li>
+              <strong>Kyoto Subway:</strong> Two lines (Karasuma and Tozai)
+              connecting major areas
+            </li>
+            <li>
+              <strong>JR Lines:</strong> JR Sagano Line to Arashiyama, JR Nara
+              Line to Fushimi Inari and Nara (covered by JR Pass)
+            </li>
+          </ul>
+        </div>
+
+        <h3>Nara Transportation</h3>
+        <div class="transport-info">
+          <p>
+            Most attractions in Nara are within walking distance once you
+            arrive. For those who prefer not to walk:
+          </p>
+          <ul>
+            <li>
+              <strong>Nara Park Loop Bus:</strong> Connects Nara Station,
+              Kintetsu-Nara Station, and major attractions (¥210 per ride)
+            </li>
+            <li>
+              <strong>Nara Park Loop Bus One-day Pass:</strong> ¥500 for
+              unlimited rides
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="etiquette">
+        <h2>Japanese Cultural Etiquette</h2>
+
+        <p>
+          Understanding and respecting Japanese customs will enhance your
+          experience and help you avoid unintentional cultural
+          misunderstandings. Here are essential etiquette guidelines for your
+          trip:
+        </p>
+
+        <h3>Temple & Shrine Etiquette</h3>
+        <div class="etiquette-card">
+          <h4>Visiting Shinto Shrines</h4>
+          <table class="do-dont-table">
+            <tr>
+              <th>Do</th>
+              <th>Don't</th>
+            </tr>
+            <tr>
+              <td class="do">
+                ✓ Bow slightly when entering through the torii gate
+              </td>
+              <td class="dont">
+                ✗ Walk in the center of the path (reserved for deities)
+              </td>
+            </tr>
+            <tr>
+              <td class="do">
+                ✓ Purify yourself at the water pavilion (temizuya) by rinsing
+                hands and mouth
+              </td>
+              <td class="dont">✗ Drink the water directly from the ladle</td>
+            </tr>
+            <tr>
+              <td class="do">
+                ✓ Bow twice, clap twice, bow once when praying at the main hall
+              </td>
+              <td class="dont">
+                ✗ Take photos inside main halls where prohibited
+              </td>
+            </tr>
+          </table>
+
+          <h4>Visiting Buddhist Temples</h4>
+          <table class="do-dont-table">
+            <tr>
+              <th>Do</th>
+              <th>Don't</th>
+            </tr>
+            <tr>
+              <td class="do">
+                ✓ Remove your shoes when entering temple buildings (look for
+                shoe racks)
+              </td>
+              <td class="dont">
+                ✗ Step on the raised thresholds between rooms
+              </td>
+            </tr>
+            <tr>
+              <td class="do">✓ Bow slightly to the Buddha statues</td>
+              <td class="dont">✗ Talk loudly or make disruptive noises</td>
+            </tr>
+            <tr>
+              <td class="do">✓ Walk clockwise around pagodas and stupas</td>
+              <td class="dont">
+                ✗ Point directly at Buddha statues or religious objects
+              </td>
+            </tr>
+          </table>
+
+          <p>
+            <strong>Important Note:</strong> At both shrines and temples, dress
+            modestly with shoulders and knees covered. Remove hats when entering
+            buildings. Follow any specific rules posted at each location.
+          </p>
+        </div>
+
+        <h3>Dining Etiquette</h3>
+        <div class="etiquette-card">
+          <h4>General Table Manners</h4>
+          <table class="do-dont-table">
+            <tr>
+              <th>Do</th>
+              <th>Don't</th>
+            </tr>
+            <tr>
+              <td class="do">
+                ✓ Say "Itadakimasu" before eating (similar to "bon appétit")
+              </td>
+              <td class="dont">
+                ✗ Stick chopsticks upright in rice (resembles funeral rituals)
+              </td>
+            </tr>
+            <tr>
+              <td class="do">
+                ✓ Say "Gochisousama deshita" after finishing (thanking for the
+                meal)
+              </td>
+              <td class="dont">
+                ✗ Pass food from chopsticks to chopsticks (resembles funeral
+                ritual)
+              </td>
+            </tr>
+            <tr>
+              <td class="do">
+                ✓ Lift small bowls (rice, soup) toward your mouth while eating
+              </td>
+              <td class="dont">✗ Blow your nose at the table</td>
+            </tr>
+            <tr>
+              <td class="do">
+                ✓ Use the opposite end of chopsticks to take food from shared
+                plates
+              </td>
+              <td class="dont">✗ Waste food (try to finish what you order)</td>
+            </tr>
+          </table>
+
+          <h4>Chopstick Etiquette</h4>
+          <ul>
+            <li>
+              Hold chopsticks toward their end, not in the middle or front third
+            </li>
+            <li>
+              When not in use, place chopsticks on the chopstick rest (hashioki)
+              or across your plate/bowl
+            </li>
+            <li>
+              Don't point with chopsticks, wave them around, or use them to
+              spear food
+            </li>
+            <li>
+              Don't rub chopsticks together (implies the restaurant has poor
+              quality chopsticks)
+            </li>
+          </ul>
+
+          <h4>Drinking Etiquette</h4>
+          <ul>
+            <li>
+              Pour drinks for others, not yourself (they will reciprocate)
+            </li>
+            <li>
+              Hold your glass with both hands when someone is pouring for you
+            </li>
+            <li>
+              Wait until everyone has a drink before saying "Kanpai" (cheers)
+              and starting to drink
+            </li>
+          </ul>
+
+          <p>
+            <strong>Tipping:</strong> Not customary in Japan and can even cause
+            confusion. No need to tip at restaurants, taxis, or hotels.
+          </p>
+        </div>
+
+        <h3>Onsen (Hot Spring) Etiquette</h3>
+        <div class="etiquette-card">
+          <p>
+            Visiting an onsen is a quintessential Japanese experience, but it
+            comes with specific rules:
+          </p>
+
+          <table class="do-dont-table">
+            <tr>
+              <th>Do</th>
+              <th>Don't</th>
+            </tr>
+            <tr>
+              <td class="do">
+                ✓ Wash thoroughly at the shower stations before entering the
+                bath
+              </td>
+              <td class="dont">
+                ✗ Wear swimwear in the bath (onsen are nude bathing areas)
+              </td>
+            </tr>
+            <tr>
+              <td class="do">
+                ✓ Bring a small towel for modesty (but don't put it in the
+                water)
+              </td>
+              <td class="dont">✗ Enter with soap or shampoo on your body</td>
+            </tr>
+            <tr>
+              <td class="do">✓ Keep conversations quiet and respectful</td>
+              <td class="dont">✗ Take photos in the bathing area</td>
+            </tr>
+            <tr>
+              <td class="do">✓ Tie up long hair to keep it out of the water</td>
+              <td class="dont">
+                ✗ Enter if you have large tattoos (some places prohibit them)
+              </td>
+            </tr>
+          </table>
+
+          <p>
+            <strong>Tattoo Note:</strong> Tattoos have historical associations
+            with organized crime in Japan. While attitudes are changing, some
+            onsen still prohibit guests with tattoos. Look for "tattoo-friendly"
+            onsen or private baths (kashikiri-buro) that can be reserved.
+          </p>
+
+          <p>
+            <strong>Gender Separation:</strong> Most onsen are separated by
+            gender. Make sure to enter the correct side: 男 (otoko) for men and
+            女 (onna) for women.
+          </p>
+        </div>
+
+        <h3>Gift-Giving & Omiyage Culture</h3>
+        <div class="etiquette-card">
+          <p>
+            Gift-giving is an important part of Japanese culture, especially the
+            tradition of bringing back souvenirs (omiyage) from your travels:
+          </p>
+
+          <h4>Omiyage Customs</h4>
+          <ul>
+            <li>
+              Omiyage are typically regional specialties, often food items that
+              represent the area visited
+            </li>
+            <li>
+              They are usually individually wrapped items that can be shared
+              among colleagues or family
+            </li>
+            <li>
+              Quality packaging is important - beautifully wrapped gifts are
+              highly appreciated
+            </li>
+            <li>
+              If you receive a gift, it's customary to express hesitation before
+              accepting it with both hands
+            </li>
+          </ul>
+
+          <h4>Gift-Giving Tips</h4>
+          <ul>
+            <li>Present and receive gifts with both hands and a slight bow</li>
+            <li>
+              Don't open a gift immediately in front of the giver unless invited
+              to do so
+            </li>
+            <li>
+              Avoid giving gifts in sets of four or nine (associated with death
+              and suffering)
+            </li>
+            <li>
+              Consider bringing small gifts from your hometown to give to hosts
+              or guides
+            </li>
+          </ul>
+
+          <p>
+            <strong>Recommended Omiyage to Bring Home:</strong> Regional sweets
+            (Tokyo Banana, Kyoto's yatsuhashi), local sake, traditional crafts,
+            or specialty teas.
+          </p>
+        </div>
+
+        <h3>General Social Customs</h3>
+        <div class="etiquette-card">
+          <h4>Bowing</h4>
+          <p>Bowing is an important form of greeting and showing respect:</p>
+          <ul>
+            <li>
+              A casual bow (15° angle) is appropriate for most tourist
+              interactions
+            </li>
+            <li>Bow with your back straight and eyes downcast</li>
+            <li>The deeper and longer the bow, the more respect is shown</li>
+            <li>It's fine to shake hands if offered, but don't initiate it</li>
+          </ul>
+
+          <h4>Shoes & Slippers</h4>
+          <ul>
+            <li>
+              Always remove shoes when entering homes, ryokans, and many
+              traditional restaurants
+            </li>
+            <li>Look for a genkan (entryway) with shoe racks or shelves</li>
+            <li>Wear slip-on shoes for convenience during your trip</li>
+            <li>
+              In some places, you'll change into special bathroom slippers when
+              using the toilet (don't forget to change back!)
+            </li>
+          </ul>
+
+          <h4>Public Behavior</h4>
+          <ul>
+            <li>Keep voices low in public, especially on trains and buses</li>
+            <li>Don't eat while walking on the street (except at festivals)</li>
+            <li>Avoid talking on phones on public transportation</li>
+            <li>
+              Stand on the left side of escalators in Tokyo (right side in
+              Osaka)
+            </li>
+            <li>Cover your mouth when coughing or yawning</li>
+          </ul>
+
+          <h4>Addressing People</h4>
+          <ul>
+            <li>
+              Use last names with the suffix "-san" (Mr./Ms.) when addressing
+              Japanese people
+            </li>
+            <li>Wait to be invited before using someone's first name</li>
+            <li>
+              Business cards (meishi) are exchanged with both hands and a slight
+              bow
+            </li>
+          </ul>
+        </div>
+
+        <h3>Special Considerations for Your Proposal</h3>
+        <div class="etiquette-card">
+          <p>For your special moment at Maruyama Park or another location:</p>
+          <ul>
+            <li>
+              Public displays of affection are generally more reserved in Japan
+              - a hug and hand-holding after the proposal is appropriate
+            </li>
+            <li>
+              If proposing in a crowded area, be mindful of not blocking
+              pathways or disturbing others
+            </li>
+            <li>
+              Consider learning the Japanese phrase for "Will you marry me?"
+              (Kekkon shite kudasai) as a special touch
+            </li>
+            <li>
+              If celebrating afterward at a restaurant, inform the staff in
+              advance - they may help arrange something special
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="maps">
+        <h2>Interactive Maps</h2>
+
+        <h3>Tokyo Overview</h3>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207446.24417022394!2d139.60078065!3d35.6684415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b857628235d%3A0xcdd8aef709a2b520!2sTokyo%2C%20Japan!5e0!3m2!1sen!2sus!4v1650000000000!5m2!1sen!2sus"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+
+        <h3>Kyoto Overview</h3>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104939.65192955921!2d135.68130800000002!3d35.0116363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001a8d6cd3cc3f1%3A0xc0961d366bbb1d3d!2sKyoto%2C%20Kyoto%20Prefecture%2C%20Japan!5e0!3m2!1sen!2sus!4v1650000000000!5m2!1sen!2sus"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+
+        <h3>Nara Overview</h3>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52208.15375857!2d135.7830867!3d34.6850869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001a9c6ddeb1bfd%3A0xd54fd05adafd71d2!2sNara%2C%20Nara%20Prefecture%2C%20Japan!5e0!3m2!1sen!2sus!4v1650000000000!5m2!1sen!2sus"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+
+      <section id="attractions">
+        <h2>Key Attractions</h2>
+
+        <div class="attraction">
+          <h3>Senso-ji Temple (Tokyo)</h3>
+          <p>
+            Tokyo's oldest temple, dating back to 645 AD. The approach via
+            Nakamise Shopping Street is lined with traditional shops selling
+            souvenirs and snacks.
+          </p>
+          <p>
+            <strong>Hours:</strong> Main grounds 24/7, Main hall 6:00 AM - 5:00
+            PM (Oct-Mar until 4:30 PM)
+          </p>
+          <p><strong>Admission:</strong> Free</p>
+        </div>
+
+        <div class="attraction">
+          <h3>Meiji Shrine (Tokyo)</h3>
+          <p>
+            Dedicated to Emperor Meiji and Empress Shoken, this Shinto shrine is
+            set in a peaceful forest with approximately 120,000 trees of 365
+            different species.
+          </p>
+          <p>
+            <strong>Hours:</strong> Sunrise to sunset (approximately 5:00 AM -
+            6:00 PM)
+          </p>
+          <p><strong>Admission:</strong> Free (Inner Garden: 500 yen)</p>
+        </div>
+
+        <div class="attraction">
+          <h3>Kamakura Great Buddha (Daibutsu)</h3>
+          <p>
+            A bronze statue of Amida Buddha, standing at 13.35 meters tall. Cast
+            in 1252, it's the second tallest bronze Buddha statue in Japan.
+          </p>
+          <p>
+            <strong>Hours:</strong> 8:00 AM - 5:30 PM (Oct-Mar until 5:00 PM)
+          </p>
+          <p><strong>Admission:</strong> 300 yen</p>
+        </div>
+
+        <div class="attraction">
+          <h3>Arashiyama Bamboo Grove (Kyoto)</h3>
+          <p>
+            A stunning natural setting with towering bamboo stalks creating an
+            otherworldly atmosphere. Best visited early morning to avoid crowds.
+          </p>
+          <p><strong>Hours:</strong> 24/7</p>
+          <p><strong>Admission:</strong> Free</p>
+        </div>
+
+        <div class="attraction">
+          <h3>Fushimi Inari Shrine (Kyoto)</h3>
+          <p>
+            Famous for its thousands of vermilion torii gates that create
+            tunnels along the mountain trails. The hike to the summit takes
+            about 2-3 hours round trip.
+          </p>
+          <p><strong>Hours:</strong> 24/7</p>
+          <p><strong>Admission:</strong> Free</p>
+        </div>
+
+        <div class="attraction">
+          <h3>Nara Park and Deer</h3>
+          <p>
+            Home to over 1,200 wild sika deer that are considered messengers of
+            the gods. Deer crackers (shika senbei) can be purchased to feed
+            them.
+          </p>
+          <p><strong>Hours:</strong> 24/7</p>
+          <p><strong>Admission:</strong> Free (Deer crackers: 200 yen)</p>
+        </div>
+
+        <div class="attraction">
+          <h3>Todai-ji Temple (Nara)</h3>
+          <p>
+            Houses the world's largest bronze Buddha statue in the world's
+            largest wooden building. A UNESCO World Heritage site.
+          </p>
+          <p>
+            <strong>Hours:</strong> 8:00 AM - 5:00 PM (Nov-Feb until 4:30 PM)
+          </p>
+          <p><strong>Admission:</strong> 600 yen</p>
+        </div>
+
+        <div class="attraction">
+          <h3>Kinkaku-ji (Golden Pavilion, Kyoto)</h3>
+          <p>
+            A Zen temple whose top two floors are completely covered in gold
+            leaf. Set alongside a reflective pond in a beautiful garden setting.
+          </p>
+          <p><strong>Hours:</strong> 9:00 AM - 5:00 PM</p>
+          <p><strong>Admission:</strong> 500 yen</p>
+        </div>
+
+        <div class="attraction">
+          <h3>Philosopher's Path (Kyoto)</h3>
+          <p>
+            A stone path following a canal lined with cherry trees. Named after
+            philosopher Nishida Kitaro who used this path for daily meditation.
+          </p>
+          <p><strong>Hours:</strong> 24/7</p>
+          <p><strong>Admission:</strong> Free</p>
+        </div>
+      </section>
+
+      <section id="proposal">
+        <h2>Special Proposal Locations</h2>
+
+        <div class="proposal-section">
+          <h3>Recommended: Maruyama Park (Kyoto)</h3>
+          <p>
+            Kyoto's most famous cherry blossom viewing spot, especially
+            beautiful at sunset. The park's centerpiece is a large weeping
+            cherry tree that is illuminated in the evenings.
+          </p>
+          <p>
+            <strong>Best time:</strong> Sunset (around 6:00-6:30 PM in April)
+          </p>
+          <p>
+            <strong>Tips:</strong> Find a quiet spot away from crowds, perhaps
+            near the pond or under the famous weeping cherry tree.
+          </p>
+          <p>
+            <strong>How to get there:</strong> From Kyoto Station, take bus #100
+            or #206 to Gion Bus Stop (¥230, ~30 minutes), then a 5-minute walk
+          </p>
+        </div>
+
+        <h3>Alternative Proposal Locations</h3>
+
+        <div class="attraction">
+          <h3>Chidorigafuchi Park (Tokyo)</h3>
+          <p>
+            Rent a rowboat and propose while surrounded by cherry blossoms
+            reflecting on the water of the Imperial Palace moat.
+          </p>
+          <p>
+            <strong>How to get there:</strong> Take Tokyo Metro Tozai Line to
+            Kudanshita Station (Exit 2), 5-minute walk
+          </p>
+        </div>
+
+        <div class="attraction">
+          <h3>Philosopher's Path (Kyoto)</h3>
+          <p>
+            A romantic stone path lined with cherry trees, offering several
+            quiet spots perfect for an intimate proposal.
+          </p>
+          <p>
+            <strong>How to get there:</strong> Take bus #5, #17, or #100 from
+            Kyoto Station to Ginkakuji-michi Bus Stop (¥230)
+          </p>
+        </div>
+
+        <div class="attraction">
+          <h3>Kiyomizu-dera Temple (Kyoto)</h3>
+          <p>
+            The wooden terrace offers a spectacular view of Kyoto, especially
+            magical at sunset or when illuminated at night.
+          </p>
+          <p>
+            <strong>How to get there:</strong> Take bus #100, #206 or #207 from
+            Kyoto Station to Kiyomizu-michi Bus Stop (¥230)
+          </p>
+        </div>
+      </section>
+
+      <section id="phrases">
+        <h2>Essential Japanese Phrases</h2>
+
+        <table class="phrase-table">
+          <tr>
+            <th>English</th>
+            <th>Japanese</th>
+            <th>Pronunciation</th>
+          </tr>
+          <tr>
+            <td>Hello</td>
+            <td>こんにちは</td>
+            <td>Kon-ni-chi-wa</td>
+          </tr>
+          <tr>
+            <td>Good morning</td>
+            <td>おはようございます</td>
+            <td>O-ha-you go-zai-mas</td>
+          </tr>
+          <tr>
+            <td>Good evening</td>
+            <td>こんばんは</td>
+            <td>Kon-ban-wa</td>
+          </tr>
+          <tr>
+            <td>Thank you</td>
+            <td>ありがとうございます</td>
+            <td>A-ri-ga-tou go-zai-mas</td>
+          </tr>
+          <tr>
+            <td>You're welcome</td>
+            <td>どういたしまして</td>
+            <td>Dou i-ta-shi-ma-shi-te</td>
+          </tr>
+          <tr>
+            <td>Excuse me</td>
+            <td>すみません</td>
+            <td>Su-mi-ma-sen</td>
+          </tr>
+          <tr>
+            <td>I don't understand</td>
+            <td>わかりません</td>
+            <td>Wa-ka-ri-ma-sen</td>
+          </tr>
+          <tr>
+            <td>Where is the bathroom?</td>
+            <td>トイレはどこですか？</td>
+            <td>To-i-re wa do-ko des-ka?</td>
+          </tr>
+          <tr>
+            <td>How much is this?</td>
+            <td>これはいくらですか？</td>
+            <td>Ko-re wa i-ku-ra des-ka?</td>
+          </tr>
+          <tr>
+            <td>Delicious!</td>
+            <td>おいしい！</td>
+            <td>O-i-shi-i!</td>
+          </tr>
+          <tr>
+            <td>Will you marry me?</td>
+            <td>結婚してください</td>
+            <td>Ke-kkon shi-te ku-da-sai</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="tips">
+        <h2>Travel Tips</h2>
+
+        <div class="tip-card">
+          <h3>Transportation</h3>
+          <p>
+            <strong>Japan Rail Pass:</strong> Activate your 7-day JR Pass upon
+            arrival. The pass costs approximately ¥50,000 (~$335) per person and
+            covers all JR trains including most Shinkansen (bullet trains).
+          </p>
+          <p>
+            <strong>IC Cards:</strong> Purchase a Suica or Pasmo card for
+            convenient travel on non-JR lines and city metros. These can also be
+            used for convenience store purchases.
+          </p>
+          <p>
+            <strong>Google Maps:</strong> Works extremely well in Japan for
+            public transportation directions.
+          </p>
+          <p>
+            <strong>Train Etiquette:</strong> Avoid talking on phones, eating on
+            local trains (Shinkansen is fine), and taking up extra seats with
+            luggage.
+          </p>
+        </div>
+
+        <div class="tip-card">
+          <h3>Etiquette</h3>
+          <p>
+            <strong>Shoes:</strong> Remove shoes when entering temples,
+            traditional restaurants, and ryokans (look for shoe lockers).
+          </p>
+          <p>
+            <strong>Tipping:</strong> Not customary in Japan. Don't tip at
+            restaurants or for taxis.
+          </p>
+          <p>
+            <strong>Eating:</strong> Saying "Itadakimasu" before eating and
+            "Gochisousama deshita" after finishing is appreciated.
+          </p>
+          <p>
+            <strong>Temples:</strong> Be respectful, speak quietly, and follow
+            posted rules about photography.
+          </p>
+        </div>
+
+        <div class="tip-card">
+          <h3>Connectivity</h3>
+          <p>
+            <strong>Pocket WiFi/SIM:</strong> Rent a pocket WiFi device at the
+            airport or get a tourist SIM card for data.
+          </p>
+          <p>
+            <strong>Free WiFi:</strong> Available at most hotels, many cafes,
+            and some public spaces, but not as ubiquitous as in some countries.
+          </p>
+        </div>
+
+        <div class="tip-card">
+          <h3>Money</h3>
+          <p>
+            <strong>Cash:</strong> Japan is still largely cash-based. Carry
+            sufficient yen, especially for smaller establishments.
+          </p>
+          <p>
+            <strong>ATMs:</strong> 7-Eleven ATMs reliably accept foreign cards.
+          </p>
+          <p>
+            <strong>Credit Cards:</strong> Major hotels, department stores, and
+            restaurants accept credit cards, but many smaller places don't.
+          </p>
+        </div>
+
+        <div class="tip-card">
+          <h3>Cultural Experiences</h3>
+          <p>
+            <strong>Tea Ceremony:</strong> Book in advance for the Hokokuji
+            Temple tea ceremony in Kamakura.
+          </p>
+          <p>
+            <strong>Zen Meditation:</strong> The session at Jushō-in Temple
+            should be booked at least 3 days in advance.
+          </p>
+          <p>
+            <strong>Ryokan Stay:</strong> Consider spending one night in a
+            traditional Japanese inn for an authentic experience.
+          </p>
+        </div>
+      </section>
+
+      <section id="budget">
+        <h2>Budget Breakdown</h2>
+
+        <table class="budget-table">
+          <tr>
+            <th>Category</th>
+            <th>Estimated Cost (2 people)</th>
+            <th>Notes</th>
+          </tr>
+          <tr>
+            <td>Flights</td>
+            <td>$1,600-2,000</td>
+            <td>Seattle to Tokyo, Osaka to Seattle</td>
+          </tr>
+          <tr>
+            <td>Accommodation</td>
+            <td>$1,200-1,500</td>
+            <td>8 nights, mix of mid-range hotels and traditional ryokan</td>
+          </tr>
+          <tr>
+            <td>Transportation</td>
+            <td>$600-700</td>
+            <td>Including 7-day JR Pass (~$335/person)</td>
+          </tr>
+          <tr>
+            <td>Food</td>
+            <td>$600-800</td>
+            <td>$40-50 per day per person</td>
+          </tr>
+          <tr>
+            <td>Activities & Entrance Fees</td>
+            <td>$300-400</td>
+            <td>Temple admissions, tea ceremony, etc.</td>
+          </tr>
+          <tr>
+            <td>Shopping & Miscellaneous</td>
+            <td>$300-500</td>
+            <td>Souvenirs, pocket WiFi, etc.</td>
+          </tr>
+          <tr>
+            <td><strong>Total Estimated Cost</strong></td>
+            <td><strong>$4,600-5,900</strong></td>
+            <td>Can be adjusted based on accommodation choices</td>
+          </tr>
+        </table>
+      </section>
     </div>
 
     <footer>
-        <p>Japan Travel Handbook | April 15-23, 2024</p>
-        <p>Created with ❤️ for your special proposal trip</p>
+      <p>Japan Travel Handbook | April 15-23, 2024</p>
+      <p>Created with ❤️ for your special proposal trip</p>
     </footer>
 
     <script>
-        // Accordion functionality
-        var acc = document.getElementsByClassName("accordion");
-        for (var i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.maxHeight) {
-                    panel.style.maxHeight = null;
-                } else {
-                    panel.style.maxHeight = panel.scrollHeight + "px";
-                }
-            });
-        }
-        
-        // Open first day by default
-        if (acc.length > 0) {
-            acc[0].click();
-        }
+      // Accordion functionality
+      var acc = document.getElementsByClassName('accordion');
+      for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener('click', function () {
+          this.classList.toggle('active');
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+          }
+        });
+      }
+
+      // Open first day by default
+      if (acc.length > 0) {
+        acc[0].click();
+      }
+
+      // Mobile menu toggle
+      document
+        .getElementById('menuToggle')
+        .addEventListener('click', function () {
+          document.getElementById('navMenu').classList.toggle('show');
+        });
+
+      // Close mobile menu when clicking on links
+      var navLinks = document.querySelectorAll('#navMenu a');
+      navLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (window.innerWidth <= 768) {
+            document.getElementById('navMenu').classList.remove('show');
+          }
+        });
+      });
+
+      // Ensure tables are responsive
+      window.addEventListener('resize', function () {
+        var tables = document.querySelectorAll(
+          '.phrase-table, .budget-table, .do-dont-table, .transport-table'
+        );
+        tables.forEach(function (table) {
+          if (window.innerWidth <= 480) {
+            table.style.display = 'block';
+            table.style.overflowX = 'auto';
+          } else {
+            table.style.display = 'table';
+            table.style.overflowX = 'visible';
+          }
+        });
+      });
+
+      // Initialize table responsiveness
+      window.dispatchEvent(new Event('resize'));
     </script>
-</body>
+  </body>
 </html>
