@@ -17,6 +17,7 @@
         max-width: 100%;
         overflow-x: hidden;
         background-color: #f9f9f9;
+        font-size: 16px;
       }
       .container {
         width: 100%;
@@ -73,6 +74,14 @@
       }
       nav ul li a:hover {
         color: #d73e48;
+      }
+      .hamburger-menu {
+        display: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 15px;
+        text-align: center;
       }
       section {
         margin-bottom: 30px;
@@ -174,17 +183,6 @@
         color: white;
         margin-top: 30px;
       }
-      @media (max-width: 768px) {
-        nav ul {
-          flex-direction: column;
-        }
-        nav ul li {
-          text-align: center;
-        }
-        .map-container {
-          height: 300px;
-        }
-      }
       .accordion {
         background-color: #f1f1f1;
         color: #333;
@@ -272,21 +270,34 @@
         margin-right: 10px;
         vertical-align: middle;
       }
+      .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #d73e48;
+        color: white;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 20px;
+        text-decoration: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+        z-index: 1000;
+      }
+      .back-to-top.visible {
+        opacity: 0.8;
+      }
+      .back-to-top:hover {
+        opacity: 1;
+      }
 
-      /* Enhanced Responsive Styles */
-      @media (max-width: 768px) {
-        header h1 {
-          font-size: 1.8rem;
-        }
-        nav ul {
-          flex-direction: column;
-        }
-        nav ul li {
-          text-align: center;
-          padding: 8px 0;
-        }
-        .map-container {
-          height: 300px;
+      /* Enhanced responsive styles */
+      @media (max-width: 1024px) {
+        body {
+          font-size: 15px;
         }
         .container {
           padding: 10px;
@@ -294,49 +305,67 @@
         section {
           padding: 15px;
         }
-        .day-card {
-          padding-left: 10px;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          font-size: 14px;
         }
-        .transport-info,
-        .etiquette-card,
-        .tip-card {
-          padding: 10px;
+        .hamburger-menu {
+          display: block;
         }
-        .do-dont-table th,
-        .do-dont-table td,
-        .phrase-table th,
-        .phrase-table td,
-        .budget-table th,
-        .budget-table td,
-        .transport-table th,
-        .transport-table td {
-          padding: 8px 5px;
-          font-size: 0.9rem;
+        nav ul {
+          flex-direction: column;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease-out;
+        }
+        nav ul.show {
+          max-height: 500px;
+        }
+        nav ul li {
+          text-align: center;
+          padding: 12px;
+          border-top: 1px solid #444;
+        }
+        .map-container {
+          height: 300px;
+        }
+        h1 {
+          font-size: 24px;
+        }
+        h2 {
+          font-size: 20px;
+        }
+        h3 {
+          font-size: 18px;
         }
         .accordion {
+          padding: 15px;
+        }
+
+        /* Make tables responsive */
+        .phrase-table,
+        .budget-table,
+        .transport-table,
+        .do-dont-table {
+          display: block;
+          width: 100%;
+          overflow-x: auto;
+        }
+
+        /* Improve card padding for mobile */
+        .tip-card,
+        .etiquette-card,
+        .transport-info,
+        .day-card {
           padding: 12px;
         }
       }
 
       @media (max-width: 480px) {
-        header h1 {
-          font-size: 1.5rem;
-        }
-        header p {
-          font-size: 0.9rem;
-        }
-        h2 {
-          font-size: 1.4rem;
-        }
-        h3 {
-          font-size: 1.2rem;
-        }
-        p,
-        li {
-          font-size: 0.95rem;
-        }
-        .map-container {
-          height: 250px;
+        body {
+          font-size: 13px;
         }
         .container {
           padding: 8px;
@@ -345,73 +374,36 @@
           padding: 12px;
           margin-bottom: 20px;
         }
-
-        /* Make tables responsive on very small screens */
-        .phrase-table,
-        .budget-table,
-        .do-dont-table,
-        .transport-table {
-          display: block;
-          overflow-x: auto;
-          white-space: nowrap;
-          -webkit-overflow-scrolling: touch;
-        }
-
-        /* Table font size adjustment */
-        .do-dont-table th,
-        .do-dont-table td,
-        .phrase-table th,
-        .phrase-table td,
-        .budget-table th,
-        .budget-table td,
-        .transport-table th,
-        .transport-table td {
-          padding: 6px 4px;
-          font-size: 0.85rem;
-        }
-
-        .accordion {
-          padding: 10px;
-          font-size: 0.95rem;
-        }
-      }
-
-      /* Medium devices (tablets) */
-      @media (min-width: 769px) and (max-width: 992px) {
-        .container {
-          padding: 12px;
-        }
-        header h1 {
-          font-size: 2rem;
-        }
         .map-container {
-          height: 350px;
+          height: 250px;
         }
-      }
+        header {
+          padding: 15px 0;
+        }
+        h1 {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 18px;
+        }
+        h3 {
+          font-size: 16px;
+        }
 
-      /* Navigation menu toggle for mobile */
-      .menu-toggle {
-        display: none;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 1.5rem;
-        cursor: pointer;
-        padding: 10px;
-      }
-
-      @media (max-width: 768px) {
-        .menu-toggle {
+        /* Stack table cells on small screens */
+        .budget-table th,
+        .budget-table td {
           display: block;
           width: 100%;
+        }
+        .budget-table tr {
+          margin-bottom: 15px;
+          display: block;
+          border-bottom: 2px solid #ddd;
+        }
+        .budget-table th {
           text-align: center;
-        }
-        nav ul {
-          display: none;
-          width: 100%;
-        }
-        nav ul.show {
-          display: flex;
+          border-bottom: none;
         }
       }
     </style>
@@ -425,8 +417,8 @@
     </header>
 
     <nav>
-      <button class="menu-toggle" id="menuToggle">☰ Menu</button>
-      <ul id="navMenu">
+      <div class="hamburger-menu">☰ Menu</div>
+      <ul>
         <li><a href="#itinerary">Itinerary</a></li>
         <li><a href="#transportation">Transportation</a></li>
         <li><a href="#etiquette">Cultural Etiquette</a></li>
@@ -1781,6 +1773,8 @@
       <p>Created with ❤️ for your special proposal trip</p>
     </footer>
 
+    <a href="#" class="back-to-top">↑</a>
+
     <script>
       // Accordion functionality
       var acc = document.getElementsByClassName('accordion');
@@ -1803,39 +1797,36 @@
 
       // Mobile menu toggle
       document
-        .getElementById('menuToggle')
+        .querySelector('.hamburger-menu')
         .addEventListener('click', function () {
-          document.getElementById('navMenu').classList.toggle('show');
+          document.querySelector('nav ul').classList.toggle('show');
         });
 
-      // Close mobile menu when clicking on links
-      var navLinks = document.querySelectorAll('#navMenu a');
+      // Close menu when clicking a link
+      var navLinks = document.querySelectorAll('nav ul li a');
       navLinks.forEach(function (link) {
         link.addEventListener('click', function () {
-          if (window.innerWidth <= 768) {
-            document.getElementById('navMenu').classList.remove('show');
-          }
+          document.querySelector('nav ul').classList.remove('show');
         });
       });
 
-      // Ensure tables are responsive
-      window.addEventListener('resize', function () {
-        var tables = document.querySelectorAll(
-          '.phrase-table, .budget-table, .do-dont-table, .transport-table'
-        );
-        tables.forEach(function (table) {
-          if (window.innerWidth <= 480) {
-            table.style.display = 'block';
-            table.style.overflowX = 'auto';
-          } else {
-            table.style.display = 'table';
-            table.style.overflowX = 'visible';
-          }
-        });
+      // Back to top button
+      var backToTopBtn = document.querySelector('.back-to-top');
+      window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 300) {
+          backToTopBtn.classList.add('visible');
+        } else {
+          backToTopBtn.classList.remove('visible');
+        }
       });
 
-      // Initialize table responsiveness
-      window.dispatchEvent(new Event('resize'));
+      backToTopBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
     </script>
   </body>
 </html>
